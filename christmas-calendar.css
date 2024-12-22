@@ -152,7 +152,7 @@ body {
   border-color: #10303c;
 }
 
-.calendar-grid :checked + .door {
+.calendar-grid :checked+.door {
   transform: rotateY(-180deg);
   border-color: #10303c;
   border-style: solid;
@@ -173,7 +173,7 @@ body {
   transition: all 400ms ease-in-out;
 }
 
-.calendar-grid :checked ~ .title-container {
+.calendar-grid :checked~.title-container {
   opacity: 1;
   transform: translateY(0);
   pointer-events: all;
@@ -195,13 +195,11 @@ body {
   content: "";
   display: block;
   border-radius: 0.75rem;
-  background: repeating-linear-gradient(
-    -45deg,
-    #f1faee 0,
-    #f1faee 0.5rem,
-    #e63946 0.5rem,
-    #e63946 1rem
-  );
+  background: repeating-linear-gradient(-45deg,
+      #f1faee 0,
+      #f1faee 0.5rem,
+      #e63946 0.5rem,
+      #e63946 1rem);
   background-size: 1.44rem 1.44rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
   position: absolute;
@@ -225,6 +223,7 @@ body {
   0% {
     background-position: 0 0;
   }
+
   100% {
     background-position: 1.44rem 0;
   }
@@ -234,6 +233,7 @@ body {
   0% {
     background-position: 0 0;
   }
+
   100% {
     background-position: 1.44rem 0;
   }
@@ -265,7 +265,7 @@ body {
   color: #ffffff;
 }
 
-.calendar-grid :checked ~ .inside {
+.calendar-grid :checked~.inside {
   opacity: 1;
 }
 
@@ -333,94 +333,117 @@ footer a {
   grid-area: day1;
   z-index: 11;
 }
+
 .calendar-grid .day-2 {
   grid-area: day2;
   z-index: 16;
 }
+
 .calendar-grid .day-3 {
   grid-area: day3;
   z-index: 23;
 }
+
 .calendar-grid .day-4 {
   grid-area: day4;
   z-index: 15;
 }
+
 .calendar-grid .day-5 {
   grid-area: day5;
   z-index: 7;
 }
+
 .calendar-grid .day-6 {
   grid-area: day6;
   z-index: 6;
 }
+
 .calendar-grid .day-7 {
   grid-area: day7;
   z-index: 12;
 }
+
 .calendar-grid .day-8 {
   grid-area: day8;
   z-index: 24;
 }
+
 .calendar-grid .day-9 {
   grid-area: day9;
   z-index: 19;
 }
+
 .calendar-grid .day-10 {
   grid-area: day10;
   z-index: 14;
 }
+
 .calendar-grid .day-11 {
   grid-area: day11;
   z-index: 21;
 }
+
 .calendar-grid .day-12 {
   grid-area: day12;
   z-index: 13;
 }
+
 .calendar-grid .day-13 {
   grid-area: day13;
   z-index: 18;
 }
+
 .calendar-grid .day-14 {
   grid-area: day14;
   z-index: 8;
 }
+
 .calendar-grid .day-15 {
   grid-area: day15;
   z-index: 1;
 }
+
 .calendar-grid .day-16 {
   grid-area: day16;
   z-index: 4;
 }
+
 .calendar-grid .day-17 {
   grid-area: day17;
   z-index: 9;
 }
+
 .calendar-grid .day-18 {
   grid-area: day18;
   z-index: 20;
 }
+
 .calendar-grid .day-19 {
   grid-area: day19;
   z-index: 3;
 }
+
 .calendar-grid .day-20 {
   grid-area: day20;
   z-index: 10;
 }
+
 .calendar-grid .day-21 {
   grid-area: day21;
   z-index: 2;
 }
+
 .calendar-grid .day-22 {
   grid-area: day22;
   z-index: 22;
 }
+
 .calendar-grid .day-23 {
   grid-area: day23;
   z-index: 5;
 }
+
 .calendar-grid .day-24 {
   grid-area: day24;
   z-index: 17;
@@ -430,78 +453,102 @@ footer a {
   .calendar-grid .day-1 {
     z-index: 16;
   }
+
   .calendar-grid .day-2 {
     z-index: 9;
   }
+
   .calendar-grid .day-3 {
     z-index: 1;
   }
+
   .calendar-grid .day-4 {
     z-index: 15;
   }
+
   .calendar-grid .day-5 {
     z-index: 22;
   }
+
   .calendar-grid .day-6 {
     z-index: 11;
   }
+
   .calendar-grid .day-7 {
     z-index: 3;
   }
+
   .calendar-grid .day-8 {
     z-index: 10;
   }
+
   .calendar-grid .day-9 {
     z-index: 2;
   }
+
   .calendar-grid .day-10 {
     z-index: 7;
   }
+
   .calendar-grid .day-11 {
     z-index: 19;
   }
+
   .calendar-grid .day-12 {
     z-index: 18;
   }
+
   .calendar-grid .day-13 {
     z-index: 4;
   }
+
   .calendar-grid .day-14 {
     z-index: 13;
   }
+
   .calendar-grid .day-15 {
     z-index: 24;
   }
+
   .calendar-grid .day-16 {
     z-index: 21;
   }
+
   .calendar-grid .day-17 {
     z-index: 23;
   }
+
   .calendar-grid .day-18 {
     z-index: 17;
   }
+
   .calendar-grid .day-19 {
     z-index: 6;
   }
+
   .calendar-grid .day-20 {
     z-index: 20;
   }
+
   .calendar-grid .day-21 {
     z-index: 8;
   }
+
   .calendar-grid .day-22 {
     z-index: 12;
   }
+
   .calendar-grid .day-23 {
     z-index: 5;
   }
+
   .calendar-grid .day-24 {
     z-index: 14;
   }
 }
 
 @media only screen and (max-width: 575px) {
+
   .calendar-grid .day-2 .title-container,
   .calendar-grid .day-5 .title-container,
   .calendar-grid .day-9 .title-container,
@@ -539,13 +586,11 @@ footer a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: repeating-linear-gradient(
-      75deg,
+  background: repeating-linear-gradient(75deg,
       transparent,
       transparent 20px,
       #9e1628 10px,
-      #9e1628 40px
-    ),
+      #9e1628 40px),
     linear-gradient(to bottom, #b11e31, #c23446);
 }
 
@@ -558,12 +603,11 @@ footer a {
   right: 0;
   bottom: 0;
   left: 0;
-  background: radial-gradient(
-    circle at center,
-    rgba(0, 0, 0, 0.5) 25%,
-    rgba(0, 0, 0, 0) 50%
-  );
+  background: radial-gradient(circle at center,
+      rgba(0, 0, 0, 0.5) 25%,
+      rgba(0, 0, 0, 0) 50%);
 }
+
 .gingerbread-man {
   --ginger-color: #c5753d;
   --dark-ginger-color: #974919;
@@ -739,11 +783,9 @@ footer a {
   width: 5rem;
   height: 2.2rem;
   background-color: var(--ginger-color);
-  background: linear-gradient(
-    to right,
-    var(--dark-ginger-color) 0%,
-    var(--ginger-color) 50%
-  );
+  background: linear-gradient(to right,
+      var(--dark-ginger-color) 0%,
+      var(--ginger-color) 50%);
   border-radius: 1rem;
   position: absolute;
 }
@@ -774,11 +816,9 @@ footer a {
   width: 2.2rem;
   height: 8rem;
   background-color: var(--ginger-color);
-  background: linear-gradient(
-    to top,
-    var(--dark-ginger-color) 0%,
-    var(--ginger-color) 40%
-  );
+  background: linear-gradient(to top,
+      var(--dark-ginger-color) 0%,
+      var(--ginger-color) 40%);
   border-radius: 1rem;
   position: absolute;
 }
@@ -869,6 +909,7 @@ footer a {
 .snowflake-resize {
   transform: scale(0.3);
 }
+
 @media only screen and (min-width: 576px) {
   .snowflake-resize {
     transform: scale(0.35);
@@ -938,15 +979,19 @@ footer a {
 .snowflake .side-2 {
   transform: rotate(60deg);
 }
+
 .snowflake .side-3 {
   transform: rotate(120deg);
 }
+
 .snowflake .side-4 {
   transform: rotate(180deg);
 }
+
 .snowflake .side-5 {
   transform: rotate(240deg);
 }
+
 .snowflake .side-6 {
   transform: rotate(300deg);
 }
@@ -955,6 +1000,7 @@ footer a {
   from {
     transform: rotate(0deg) scale(0.35);
   }
+
   to {
     transform: rotate(359deg) scale(0.35);
   }
@@ -964,6 +1010,7 @@ footer a {
   from {
     transform: rotate(0deg) scale(0.35);
   }
+
   to {
     transform: rotate(359deg) scale(0.35);
   }
@@ -973,6 +1020,7 @@ footer a {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(359deg);
   }
@@ -982,6 +1030,7 @@ footer a {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(359deg);
   }
@@ -1004,11 +1053,9 @@ footer a {
   height: 100%;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(
-    circle at center,
-    var(--stocking-background) 0,
-    rgb(25, 50, 60) 200%
-  );
+  background: radial-gradient(circle at center,
+      var(--stocking-background) 0,
+      rgb(25, 50, 60) 200%);
 }
 
 .stocking {
@@ -1048,10 +1095,8 @@ footer a {
   height: 5rem;
   top: -0.5rem;
   left: -0.5rem;
-  background-image: radial-gradient(
-    var(--stocking-wool) 50%,
-    rgba(255, 255, 255, 0) 70%
-  );
+  background-image: radial-gradient(var(--stocking-wool) 50%,
+      rgba(255, 255, 255, 0) 70%);
   background-position: 0 0;
   background-size: 0.925rem 1rem;
 }
@@ -1061,20 +1106,16 @@ footer a {
   width: 6rem;
   height: 10rem;
   border-radius: 0 0 0 2rem;
-  background: repeating-linear-gradient(
-      20deg,
+  background: repeating-linear-gradient(20deg,
       transparent,
       transparent 10px,
       var(--stocking-blue) 5px,
-      var(--stocking-blue) 20px
-    ),
-    repeating-linear-gradient(
-      110deg,
+      var(--stocking-blue) 20px),
+    repeating-linear-gradient(110deg,
       transparent,
       transparent 10px,
       var(--stocking-blue) 5px,
-      var(--stocking-blue) 20px
-    );
+      var(--stocking-blue) 20px);
   background-color: var(--stocking-red);
   overflow: hidden;
 }
@@ -1084,20 +1125,16 @@ footer a {
   width: 5rem;
   height: 10rem;
   border-radius: 2rem;
-  background: repeating-linear-gradient(
-      20deg,
+  background: repeating-linear-gradient(20deg,
       transparent,
       transparent 10px,
       var(--stocking-blue) 5px,
-      var(--stocking-blue) 20px
-    ),
-    repeating-linear-gradient(
-      110deg,
+      var(--stocking-blue) 20px),
+    repeating-linear-gradient(110deg,
       transparent,
       transparent 10px,
       var(--stocking-blue) 5px,
-      var(--stocking-blue) 20px
-    );
+      var(--stocking-blue) 20px);
   background-color: var(--stocking-red);
   transform-origin: top left;
   transform: rotate(-70deg) translateY(-0.6rem);
@@ -1129,13 +1166,11 @@ footer a {
  * https://codepen.io/johnnyfekete/pen/NWRxmwG
  */
 .gift-box-day {
-  background: linear-gradient(
-    200deg,
-    #1d3557 33%,
-    #457b9d 33%,
-    #457b9d 66%,
-    #a8dadc 66%
-  );
+  background: linear-gradient(200deg,
+      #1d3557 33%,
+      #457b9d 33%,
+      #457b9d 66%,
+      #a8dadc 66%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1194,47 +1229,47 @@ footer a {
 
 .gift-box .gift-box__side,
 .gift-box .gift-box-lid__side {
-  background: linear-gradient(
-    to right,
-    var(--gift-box-color) 40%,
-    var(--wrap-color) 40%,
-    var(--wrap-color) 60%,
-    var(--gift-box-color) 60%
-  );
-}
-.gift-box .gift-box__end,
-.gift-box .gift-box-lid__end {
-  background: linear-gradient(
-      to right,
-      transparent 40%,
-      var(--wrap-top-color) 40%,
-      var(--wrap-top-color) 60%,
-      transparent 60%
-    ),
-    linear-gradient(
-      to bottom,
+  background: linear-gradient(to right,
       var(--gift-box-color) 40%,
       var(--wrap-color) 40%,
       var(--wrap-color) 60%,
-      var(--gift-box-color) 60%
-    );
+      var(--gift-box-color) 60%);
+}
+
+.gift-box .gift-box__end,
+.gift-box .gift-box-lid__end {
+  background: linear-gradient(to right,
+      transparent 40%,
+      var(--wrap-top-color) 40%,
+      var(--wrap-top-color) 60%,
+      transparent 60%),
+    linear-gradient(to bottom,
+      var(--gift-box-color) 40%,
+      var(--wrap-color) 40%,
+      var(--wrap-color) 60%,
+      var(--gift-box-color) 60%);
 }
 
 .gift-box .gift-box__side--front {
   transform: rotateY(0deg) translateZ(100px);
 }
+
 .gift-box .gift-box__side--back {
   transform: rotateY(180deg) translateZ(100px);
 }
+
 .gift-box .gift-box__side--left {
   transform: rotateY(-90deg) translateZ(100px);
 }
+
 .gift-box .gift-box__side--right {
   transform: rotateY(90deg) translateZ(100px);
 }
+
 .gift-box .gift-box__side--top {
   transform: rotateX(90deg) translateZ(100px);
 }
+
 .gift-box .gift-box__side--bottom {
   transform: rotateX(-90deg) translateZ(100px);
 }
@@ -1242,16 +1277,19 @@ footer a {
 .gift-box .gift-box-lid__side--front {
   transform: rotateY(0deg) translateZ(110px) translateX(-10px) translateY(-10px);
 }
+
 .gift-box .gift-box-lid__side--back {
-  transform: rotateY(180deg) translateZ(110px) translateX(10px)
-    translateY(-10px);
+  transform: rotateY(180deg) translateZ(110px) translateX(10px) translateY(-10px);
 }
+
 .gift-box .gift-box-lid__side--left {
   transform: rotateY(-90deg) translateZ(120px) translateY(-10px);
 }
+
 .gift-box .gift-box-lid__side--right {
   transform: rotateY(90deg) translateZ(100px) translateY(-10px);
 }
+
 .gift-box .gift-box-lid__side--top {
   transform: rotateX(90deg) translateZ(120px) translateX(-10px) translateY(0);
 }
@@ -1266,8 +1304,7 @@ footer a {
   transform-origin: 50% 50%;
   transform: rotateX(75deg) rotateY(90deg)
     /* use a CSS variable for the translate, defined in CSS */
-    translateZ(calc(80px - var(--gift-box-position))) translateX(-85px)
-    translateY(-75px) skewY(30deg);
+    translateZ(calc(80px - var(--gift-box-position))) translateX(-85px) translateY(-75px) skewY(30deg);
 }
 
 .gift-box .ribbon-r {
@@ -1280,8 +1317,7 @@ footer a {
   transform-origin: 50% 50%;
   transform: rotateX(-5deg) rotateY(90deg)
     /* use a CSS variable for the translate, defined in CSS */
-    translateZ(calc(80px - var(--gift-box-position))) translateX(-30px)
-    translateY(-110px) skewY(30deg);
+    translateZ(calc(80px - var(--gift-box-position))) translateX(-30px) translateY(-110px) skewY(30deg);
 }
 
 .ribbon-l-end {
@@ -1293,8 +1329,7 @@ footer a {
   border: 2px solid var(--gift-box-edge-color);
   border-top: none;
   border-bottom: none;
-  transform: rotateX(-70deg) translateX(80px) translateY(-80px)
-    translateZ(-60px);
+  transform: rotateX(-70deg) translateX(80px) translateY(-80px) translateZ(-60px);
 }
 
 .ribbon-r-end {
@@ -1313,6 +1348,7 @@ footer a {
   from {
     transform: translateZ(-100px) rotateY(50deg) rotateX(-5deg) rotateZ(-30deg);
   }
+
   to {
     transform: translateZ(-100px) rotateY(409deg) rotateX(-5deg) rotateZ(-30deg);
   }
@@ -1322,6 +1358,7 @@ footer a {
   from {
     transform: translateZ(-100px) rotateY(50deg) rotateX(-5deg) rotateZ(-30deg);
   }
+
   to {
     transform: translateZ(-100px) rotateY(409deg) rotateX(-5deg) rotateZ(-30deg);
   }
@@ -1363,19 +1400,18 @@ footer a {
   position: absolute;
   top: 6rem;
 }
+
 .sledge .sledge-runner__front::after {
   content: "";
   display: block;
   margin-top: -4rem;
   width: 8rem;
   height: 8rem;
-  background: radial-gradient(
-    closest-side,
-    transparent 75%,
-    var(--sledge-runner) 27%,
-    var(--sledge-runner) 99%,
-    transparent 100%
-  );
+  background: radial-gradient(closest-side,
+      transparent 75%,
+      var(--sledge-runner) 27%,
+      var(--sledge-runner) 99%,
+      transparent 100%);
 }
 
 .sledge .sledge-runner__front--top {
@@ -1432,11 +1468,9 @@ footer a {
   box-sizing: border-box;
   width: 15rem;
   height: 0.8rem;
-  background: linear-gradient(
-    to bottom,
-    var(--sledge-wood-light) 0%,
-    var(--sledge-wood-dark) 100%
-  );
+  background: linear-gradient(to bottom,
+      var(--sledge-wood-light) 0%,
+      var(--sledge-wood-dark) 100%);
   border: 1.5px solid var(--sledge-edge);
 }
 
@@ -1444,19 +1478,16 @@ footer a {
   position: absolute;
   right: 0;
   top: 0;
-  transform: skewY(-50deg) rotate(90deg) scaleX(1.8) scaleY(0.85)
-    translateX(0.6rem) translateY(-0.4rem);
+  transform: skewY(-50deg) rotate(90deg) scaleX(1.8) scaleY(0.85) translateX(0.6rem) translateY(-0.4rem);
 }
 
 .sledge .sledge-back__piece {
   box-sizing: border-box;
   width: 0.8rem;
   height: 0.8rem;
-  background: linear-gradient(
-    to bottom,
-    var(--sledge-wood-light) 0%,
-    var(--sledge-wood-dark) 100%
-  );
+  background: linear-gradient(to bottom,
+      var(--sledge-wood-light) 0%,
+      var(--sledge-wood-dark) 100%);
   border: 1.5px solid var(--sledge-edge);
 }
 
@@ -1477,20 +1508,16 @@ footer a {
  */
 .santa-container {
   display: flex;
-  background: repeating-linear-gradient(
-      45deg,
+  background: repeating-linear-gradient(45deg,
       transparent,
       transparent 1rem,
       rgba(154, 140, 152, 0.3) 1rem,
-      rgba(154, 140, 152, 0.3) 2rem
-    ),
-    repeating-linear-gradient(
-      -45deg,
+      rgba(154, 140, 152, 0.3) 2rem),
+    repeating-linear-gradient(-45deg,
       transparent,
       transparent 1rem,
       rgba(154, 140, 152, 0.3) 1rem,
-      rgba(154, 140, 152, 0.3) 2rem
-    ),
+      rgba(154, 140, 152, 0.3) 2rem),
     linear-gradient(to bottom, #f2e9e4, #f2e9e4);
   align-items: center;
   justify-content: center;
@@ -1525,10 +1552,7 @@ footer a {
   left: 1rem;
   width: 12rem;
   height: 12rem;
-  filter: drop-shadow(2px 2px 0 var(--santa-border))
-    drop-shadow(-2px 2px 0 var(--santa-border))
-    drop-shadow(2px -2px 0 var(--santa-border))
-    drop-shadow(-2px -2px 0 var(--santa-border));
+  filter: drop-shadow(2px 2px 0 var(--santa-border)) drop-shadow(-2px 2px 0 var(--santa-border)) drop-shadow(2px -2px 0 var(--santa-border)) drop-shadow(-2px -2px 0 var(--santa-border));
 }
 
 .santa .santa-beard {
@@ -1545,33 +1569,43 @@ footer a {
 .santa .santa-beard:nth-child(2) {
   transform: rotate(15deg);
 }
+
 .santa .santa-beard:nth-child(3) {
   transform: rotate(30deg);
 }
+
 .santa .santa-beard:nth-child(4) {
   transform: rotate(45deg);
 }
+
 .santa .santa-beard:nth-child(5) {
   transform: rotate(60deg);
 }
+
 .santa .santa-beard:nth-child(6) {
   transform: rotate(75deg);
 }
+
 .santa .santa-beard:nth-child(7) {
   transform: rotate(90deg);
 }
+
 .santa .santa-beard:nth-child(8) {
   transform: rotate(105deg);
 }
+
 .santa .santa-beard:nth-child(9) {
   transform: rotate(120deg);
 }
+
 .santa .santa-beard:nth-child(10) {
   transform: rotate(135deg);
 }
+
 .santa .santa-beard:nth-child(11) {
   transform: rotate(150deg);
 }
+
 .santa .santa-beard:nth-child(12) {
   transform: rotate(165deg);
 }
@@ -1617,13 +1651,11 @@ footer a {
   left: -2rem;
   width: 3rem;
   height: 2rem;
-  background: radial-gradient(
-    farthest-side,
-    transparent 33.3%,
-    var(--santa-border) 33.3%,
-    var(--santa-border) 37%,
-    var(--santa-moustache) 38%
-  );
+  background: radial-gradient(farthest-side,
+      transparent 33.3%,
+      var(--santa-border) 33.3%,
+      var(--santa-border) 37%,
+      var(--santa-moustache) 38%);
   background-position: -3rem -2rem;
   background-size: 300% 200%;
   border-radius: 0 100% 0 100%;
@@ -1708,15 +1740,10 @@ footer a {
   width: 12rem;
   height: 6rem;
   border-radius: 6rem 6rem 0 0;
-  background: radial-gradient(
-    circle at 20% 100%,
-    transparent 14%,
-    var(--santa-hat) 14%
-  );
-  filter: drop-shadow(1px 1px 0 var(--santa-border))
-    drop-shadow(-1px 1px 0 var(--santa-border))
-    drop-shadow(1px -1px 0 var(--santa-border))
-    drop-shadow(-1px -1px 0 var(--santa-border));
+  background: radial-gradient(circle at 20% 100%,
+      transparent 14%,
+      var(--santa-hat) 14%);
+  filter: drop-shadow(1px 1px 0 var(--santa-border)) drop-shadow(-1px 1px 0 var(--santa-border)) drop-shadow(1px -1px 0 var(--santa-border)) drop-shadow(-1px -1px 0 var(--santa-border));
 }
 
 .santa .santa-hat-front {
@@ -1725,10 +1752,7 @@ footer a {
   left: 3rem;
   width: 10rem;
   height: 3rem;
-  filter: drop-shadow(1px 1px 0 var(--santa-border))
-    drop-shadow(-1px 1px 0 var(--santa-border))
-    drop-shadow(1px -1px 0 var(--santa-border))
-    drop-shadow(-1px -1px 0 var(--santa-border));
+  filter: drop-shadow(1px 1px 0 var(--santa-border)) drop-shadow(-1px 1px 0 var(--santa-border)) drop-shadow(1px -1px 0 var(--santa-border)) drop-shadow(-1px -1px 0 var(--santa-border));
 }
 
 .santa .santa-hat-front-bg {
@@ -1742,42 +1766,55 @@ footer a {
 .santa .santa-hat-front-bg:nth-child(1) {
   left: 0.666rem;
 }
+
 .santa .santa-hat-front-bg:nth-child(2) {
   left: 1.333rem;
 }
+
 .santa .santa-hat-front-bg:nth-child(3) {
   left: 2rem;
 }
+
 .santa .santa-hat-front-bg:nth-child(4) {
   left: 2.666rem;
 }
+
 .santa .santa-hat-front-bg:nth-child(5) {
   left: 3.333rem;
 }
+
 .santa .santa-hat-front-bg:nth-child(6) {
   left: 4rem;
 }
+
 .santa .santa-hat-front-bg:nth-child(7) {
   left: 4.666rem;
 }
+
 .santa .santa-hat-front-bg:nth-child(8) {
   left: 5.333rem;
 }
+
 .santa .santa-hat-front-bg:nth-child(9) {
   left: 6rem;
 }
+
 .santa .santa-hat-front-bg:nth-child(10) {
   left: 6.666rem;
 }
+
 .santa .santa-hat-front-bg:nth-child(11) {
   left: 7.333rem;
 }
+
 .santa .santa-hat-front-bg:nth-child(12) {
   left: 8rem;
 }
+
 .santa .santa-hat-front-bg:nth-child(13) {
   left: 8.666rem;
 }
+
 .santa .santa-hat-front-bg:nth-child(14) {
   left: 9.333rem;
 }
@@ -1794,12 +1831,15 @@ footer a {
 .santa .santa-hat-front-side:nth-child(1) {
   top: 0.333rem;
 }
+
 .santa .santa-hat-front-side:nth-child(2) {
   top: 0.999rem;
 }
+
 .santa .santa-hat-front-side:nth-child(3) {
   top: 1.555rem;
 }
+
 .santa .santa-hat-front-side:nth-child(4) {
   top: 2.111rem;
 }
@@ -1809,10 +1849,7 @@ footer a {
   top: 5.2rem;
   width: 2rem;
   height: 2rem;
-  filter: drop-shadow(1px 1px 0 var(--santa-border))
-    drop-shadow(-1px 1px 0 var(--santa-border))
-    drop-shadow(1px -1px 0 var(--santa-border))
-    drop-shadow(-1px -1px 0 var(--santa-border));
+  filter: drop-shadow(1px 1px 0 var(--santa-border)) drop-shadow(-1px 1px 0 var(--santa-border)) drop-shadow(1px -1px 0 var(--santa-border)) drop-shadow(-1px -1px 0 var(--santa-border));
 }
 
 .santa .santa-hat-pompom-bg {
@@ -1827,15 +1864,19 @@ footer a {
 .santa .santa-hat-pompom-bg:nth-child(2) {
   transform: rotate(30deg);
 }
+
 .santa .santa-hat-pompom-bg:nth-child(3) {
   transform: rotate(60deg);
 }
+
 .santa .santa-hat-pompom-bg:nth-child(4) {
   transform: rotate(90deg);
 }
+
 .santa .santa-hat-pompom-bg:nth-child(5) {
   transform: rotate(120deg);
 }
+
 .santa .santa-hat-pompom-bg:nth-child(6) {
   transform: rotate(150deg);
 }
@@ -1879,11 +1920,9 @@ footer a {
   z-index: 2;
   left: 1.5rem;
   bottom: 2rem;
-  background: linear-gradient(
-    to right,
-    var(--candle-light) 0,
-    var(--candle-dark) 100%
-  );
+  background: linear-gradient(to right,
+      var(--candle-light) 0,
+      var(--candle-dark) 100%);
 }
 
 .candle .candle__body::before {
@@ -1894,11 +1933,9 @@ footer a {
   width: 3rem;
   height: 2rem;
   border-radius: 50%;
-  background: radial-gradient(
-    circle at 50% 0,
-    var(--candle-light) 0,
-    var(--candle-top) 100%
-  );
+  background: radial-gradient(circle at 50% 0,
+      var(--candle-light) 0,
+      var(--candle-top) 100%);
 }
 
 .candle .candle__body::after {
@@ -1909,11 +1946,9 @@ footer a {
   width: 3rem;
   height: 2rem;
   border-radius: 50%;
-  background: linear-gradient(
-    to right,
-    var(--candle-light) 0,
-    var(--candle-dark) 100%
-  );
+  background: linear-gradient(to right,
+      var(--candle-light) 0,
+      var(--candle-dark) 100%);
 }
 
 .candle .candle__wax-1 {
@@ -3376,6 +3411,7 @@ footer a {
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-600px);
   }
@@ -3385,6 +3421,7 @@ footer a {
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-600px);
   }
@@ -3411,14 +3448,12 @@ footer a {
   position: relative;
   width: 6rem;
   height: 12rem;
-  background: repeating-linear-gradient(
-    40deg,
-    var(--candycane-white),
-    var(--candycane-white) 1rem,
-    var(--candycane-red) 1.1rem,
-    var(--candycane-red) 2rem,
-    var(--candycane-white) 2.1rem
-  );
+  background: repeating-linear-gradient(40deg,
+      var(--candycane-white),
+      var(--candycane-white) 1rem,
+      var(--candycane-red) 1.1rem,
+      var(--candycane-red) 2rem,
+      var(--candycane-white) 2.1rem);
   border-radius: 3rem 3rem 0 0;
   transform: scale(0.35) translateY(-7rem) translateX(0rem);
 }
@@ -3456,11 +3491,9 @@ footer a {
   height: 1rem;
   background: yellow;
   overflow: hidden;
-  background: radial-gradient(
-    circle at 50% 0%,
-    transparent 69%,
-    var(--candycane-background) 70%
-  );
+  background: radial-gradient(circle at 50% 0%,
+      transparent 69%,
+      var(--candycane-background) 70%);
   background-size: 100% 100%;
 }
 
@@ -3583,12 +3616,10 @@ footer a {
   top: 0;
   left: 0;
   z-index: 2;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.3) 33%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.3) 33%,
+      rgba(255, 255, 255, 0) 100%);
 }
 
 .hot-chocolate .mug__shine--bottom {
@@ -3607,12 +3638,10 @@ footer a {
   height: 3rem;
   position: absolute;
   top: -1.5rem;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.3) 33%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.3) 33%,
+      rgba(255, 255, 255, 0) 100%);
   border-radius: 50%;
 }
 
@@ -3624,20 +3653,16 @@ footer a {
   width: 2.4rem;
   height: 1.6rem;
   border-radius: 0.8rem / 1.2rem;
-  background: radial-gradient(
-    circle at 0 0,
-    var(--marshmallow) 0%,
-    #ffffff 100%
-  );
+  background: radial-gradient(circle at 0 0,
+      var(--marshmallow) 0%,
+      #ffffff 100%);
   box-shadow: 2px 2px 0 2px rgba(0, 0, 0, 0.3);
 }
 
 .hot-chocolate .marshmallow:nth-child(odd) {
-  background: radial-gradient(
-    circle at 0 0,
-    var(--pink-marshmallow) 0%,
-    #ffffff 100%
-  );
+  background: radial-gradient(circle at 0 0,
+      var(--pink-marshmallow) 0%,
+      #ffffff 100%);
 }
 
 .hot-chocolate .marshmallow:nth-child(4) {
@@ -4026,30 +4051,39 @@ footer a {
   0% {
     opacity: 0.1;
   }
+
   20% {
     opacity: 0.09;
   }
+
   30% {
     opacity: 0.1;
   }
+
   40% {
     opacity: 0.08;
   }
+
   50% {
     opacity: 0.1;
   }
+
   60% {
     opacity: 0.11;
   }
+
   70% {
     opacity: 0.11;
   }
+
   80% {
     opacity: 0.09;
   }
+
   90% {
     opacity: 0.12;
   }
+
   100% {
     opacity: 0.1;
   }
@@ -4059,30 +4093,39 @@ footer a {
   0% {
     opacity: 0.1;
   }
+
   20% {
     opacity: 0.09;
   }
+
   30% {
     opacity: 0.1;
   }
+
   40% {
     opacity: 0.08;
   }
+
   50% {
     opacity: 0.1;
   }
+
   60% {
     opacity: 0.11;
   }
+
   70% {
     opacity: 0.11;
   }
+
   80% {
     opacity: 0.09;
   }
+
   90% {
     opacity: 0.12;
   }
+
   100% {
     opacity: 0.1;
   }
@@ -4092,18 +4135,23 @@ footer a {
   0% {
     opacity: 1;
   }
+
   20% {
     opacity: 1;
   }
+
   30% {
     opacity: 0.4;
   }
+
   40% {
     opacity: 0.7;
   }
+
   50% {
     opacity: 0.4;
   }
+
   60% {
     opacity: 1;
   }
@@ -4113,18 +4161,23 @@ footer a {
   0% {
     opacity: 1;
   }
+
   20% {
     opacity: 1;
   }
+
   30% {
     opacity: 0.4;
   }
+
   40% {
     opacity: 0.7;
   }
+
   50% {
     opacity: 0.4;
   }
+
   60% {
     opacity: 1;
   }
@@ -4134,30 +4187,39 @@ footer a {
   0% {
     opacity: 0.1;
   }
+
   20% {
     opacity: 0.09;
   }
+
   30% {
     opacity: 0;
   }
+
   40% {
     opacity: 0.02;
   }
+
   50% {
     opacity: 0;
   }
+
   60% {
     opacity: 0.11;
   }
+
   70% {
     opacity: 0.11;
   }
+
   80% {
     opacity: 0.09;
   }
+
   90% {
     opacity: 0.12;
   }
+
   100% {
     opacity: 0.1;
   }
@@ -4167,30 +4229,39 @@ footer a {
   0% {
     opacity: 0.1;
   }
+
   20% {
     opacity: 0.09;
   }
+
   30% {
     opacity: 0;
   }
+
   40% {
     opacity: 0.02;
   }
+
   50% {
     opacity: 0;
   }
+
   60% {
     opacity: 0.11;
   }
+
   70% {
     opacity: 0.11;
   }
+
   80% {
     opacity: 0.09;
   }
+
   90% {
     opacity: 0.12;
   }
+
   100% {
     opacity: 0.1;
   }
@@ -4385,6 +4456,7 @@ footer a {
   border: 0.5rem solid var(--polar-bear-face);
   transform: scaleY(0.9);
 }
+
 .polar-bear .polar-bear__eye::after {
   position: absolute;
   content: "";
@@ -4393,16 +4465,12 @@ footer a {
   left: -0.5rem;
   width: 2.2rem;
   height: 1rem;
-  background: radial-gradient(
-      circle at 0.25rem 0.03rem,
+  background: radial-gradient(circle at 0.25rem 0.03rem,
       var(--polar-bear-face) 0.25rem,
-      transparent 0.25rem
-    ),
-    radial-gradient(
-      circle at 1.75rem 0.03rem,
+      transparent 0.25rem),
+    radial-gradient(circle at 1.75rem 0.03rem,
       var(--polar-bear-face) 0.25rem,
-      var(--polar-bear) 0.25rem
-    );
+      var(--polar-bear) 0.25rem);
 }
 
 .polar-bear .polar-bear__eye.polar-bear__eye--left {
@@ -4424,6 +4492,7 @@ footer a {
   border: 0.5rem solid var(--polar-bear-face);
   transform: scaleY(0.9);
 }
+
 .polar-bear .polar-bear__lip::after {
   position: absolute;
   content: "";
@@ -4432,16 +4501,12 @@ footer a {
   left: -0.5rem;
   width: 2.2rem;
   height: 1rem;
-  background: radial-gradient(
-      circle at 0.25rem 0.97rem,
+  background: radial-gradient(circle at 0.25rem 0.97rem,
       var(--polar-bear-face) 0.25rem,
-      transparent 0.25rem
-    ),
-    radial-gradient(
-      circle at 1.75rem 0.97rem,
+      transparent 0.25rem),
+    radial-gradient(circle at 1.75rem 0.97rem,
       var(--polar-bear-face) 0.25rem,
-      var(--polar-bear) 0.25rem
-    );
+      var(--polar-bear) 0.25rem);
 }
 
 .polar-bear .polar-bear__lip.polar-bear__lip--left {
@@ -4763,13 +4828,11 @@ footer a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(
-    circle at 100%,
-    #6930c3 0%,
-    #56cfe1 40%,
-    #72efdd 70%,
-    #80ffdb 100%
-  );
+  background: radial-gradient(circle at 100%,
+      #6930c3 0%,
+      #56cfe1 40%,
+      #72efdd 70%,
+      #80ffdb 100%);
   height: 100%;
   margin: 0;
 }
@@ -4834,28 +4897,25 @@ footer a {
   left: 4rem;
   width: 17rem;
   height: 4rem;
-  background: repeating-linear-gradient(
-    to right,
-    #006600,
-    #006600 0.2rem,
-    transparent 0.2rem,
-    transparent 0.7rem
-  );
+  background: repeating-linear-gradient(to right,
+      #006600,
+      #006600 0.2rem,
+      transparent 0.2rem,
+      transparent 0.7rem);
   transform: skewX(-45deg);
 }
+
 .ornaments .spikes-lower {
   position: absolute;
   top: 0.3rem;
   left: 4rem;
   width: 17rem;
   height: 4rem;
-  background: repeating-linear-gradient(
-    to right,
-    #006600,
-    #006600 0.2rem,
-    transparent 0.2rem,
-    transparent 0.7rem
-  );
+  background: repeating-linear-gradient(to right,
+      #006600,
+      #006600 0.2rem,
+      transparent 0.2rem,
+      transparent 0.7rem);
   transform: skewX(45deg);
 }
 
@@ -4878,11 +4938,9 @@ footer a {
   display: block;
   width: 14rem;
   height: 14rem;
-  background: repeating-conic-gradient(
-    from 0deg,
-    #006600 0deg 2deg,
-    transparent 2deg 9deg
-  );
+  background: repeating-conic-gradient(from 0deg,
+      #006600 0deg 2deg,
+      transparent 2deg 9deg);
 }
 
 .ornaments .ornament {
@@ -4918,44 +4976,37 @@ footer a {
   top: 0.4rem;
   left: 0.5rem;
   border-radius: 50%;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.5),
-    transparent 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.5),
+      transparent 100%);
   transform: rotate(-20deg);
 }
 
 .ornament-1 {
   top: 12.7rem;
   left: 5rem;
-  background: radial-gradient(
-    circle at 75% 75%,
-    var(--ornament-1),
-    40%,
-    var(--ornament-1-light) 80%
-  );
+  background: radial-gradient(circle at 75% 75%,
+      var(--ornament-1),
+      40%,
+      var(--ornament-1-light) 80%);
 }
 
 .ornament-2 {
   top: 16.8rem;
   left: 15rem;
-  background: radial-gradient(
-    circle at 75% 75%,
-    var(--ornament-2),
-    40%,
-    var(--ornament-2-light) 80%
-  );
+  background: radial-gradient(circle at 75% 75%,
+      var(--ornament-2),
+      40%,
+      var(--ornament-2-light) 80%);
 }
+
 .ornament-3 {
   top: 15.8rem;
   left: 25rem;
-  background: radial-gradient(
-    circle at 75% 75%,
-    var(--ornament-3),
-    40%,
-    var(--ornament-3-light) 80%
-  );
+  background: radial-gradient(circle at 75% 75%,
+      var(--ornament-3),
+      40%,
+      var(--ornament-3-light) 80%);
 }
 
 .ornaments .hanger {
@@ -4991,7 +5042,7 @@ footer a {
   border-radius: 50% 50% 50% 0;
 }
 
-/** 
+/**
  * Day 15 - North Pole sign
  * https://codepen.io/johnnyfekete/pen/MWjmwBY
  */
@@ -5067,13 +5118,11 @@ footer a {
   left: 5.75rem;
   bottom: 1rem;
   width: 1.5rem;
-  background: repeating-linear-gradient(
-    -25deg,
-    var(--north-pole-pole),
-    var(--north-pole-pole) 1.2rem,
-    var(--north-pole-white) 1.2rem,
-    var(--north-pole-white) 2.4rem
-  );
+  background: repeating-linear-gradient(-25deg,
+      var(--north-pole-pole),
+      var(--north-pole-pole) 1.2rem,
+      var(--north-pole-white) 1.2rem,
+      var(--north-pole-white) 2.4rem);
 }
 
 .north-pole .pole::before {
@@ -5084,13 +5133,11 @@ footer a {
   right: 0;
   top: 0;
   bottom: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.2) 0,
-    rgba(0, 0, 0, 0) 20%,
-    rgba(0, 0, 0, 0) 70%,
-    rgba(0, 0, 0, 0.3) 100%
-  );
+  background: linear-gradient(to right,
+      rgba(0, 0, 0, 0.2) 0,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0) 70%,
+      rgba(0, 0, 0, 0.3) 100%);
 }
 
 .north-pole .pole::after {
@@ -5337,13 +5384,11 @@ footer a {
   left: 13rem;
   width: 3rem;
   height: 3rem;
-  background: radial-gradient(
-    circle at 0 0,
-    transparent 1.5rem,
-    var(--skate-blade) 1.5rem,
-    var(--skate-blade) 3rem,
-    transparent 3rem
-  );
+  background: radial-gradient(circle at 0 0,
+      transparent 1.5rem,
+      var(--skate-blade) 1.5rem,
+      var(--skate-blade) 3rem,
+      transparent 3rem);
 }
 
 .skate .skate-blade::after {
@@ -5367,13 +5412,11 @@ footer a {
   left: 1rem;
   width: 3rem;
   height: 3rem;
-  background: radial-gradient(
-    circle at 0 0,
-    transparent 1.5rem,
-    var(--skate-gray) 1.5rem,
-    var(--skate-gray) 3rem,
-    transparent 3rem
-  );
+  background: radial-gradient(circle at 0 0,
+      transparent 1.5rem,
+      var(--skate-gray) 1.5rem,
+      var(--skate-gray) 3rem,
+      transparent 3rem);
 }
 
 .skate .skate-blade-holder-left::before {
@@ -5397,13 +5440,11 @@ footer a {
   left: 10rem;
   width: 3rem;
   height: 3rem;
-  background: radial-gradient(
-    circle at 3rem 0,
-    transparent 1.5rem,
-    var(--skate-gray) 1.5rem,
-    var(--skate-gray) 3rem,
-    transparent 3rem
-  );
+  background: radial-gradient(circle at 3rem 0,
+      transparent 1.5rem,
+      var(--skate-gray) 1.5rem,
+      var(--skate-gray) 3rem,
+      transparent 3rem);
 }
 
 .skate .skate-blade-holder-right::before {
@@ -5468,11 +5509,9 @@ footer a {
   left: 2.5rem;
   width: 5rem;
   height: 5rem;
-  background: radial-gradient(
-    circle at 5rem 0,
-    transparent 5rem,
-    var(--skate) 5rem
-  );
+  background: radial-gradient(circle at 5rem 0,
+      transparent 5rem,
+      var(--skate) 5rem);
 }
 
 .skate .skate-boot-main-bottom {
@@ -5505,11 +5544,9 @@ footer a {
   height: 1rem;
   width: 1rem;
   background-color: var(--skate);
-  background: radial-gradient(
-    circle at 0 0,
-    transparent 1rem,
-    var(--skate) 1rem
-  );
+  background: radial-gradient(circle at 0 0,
+      transparent 1rem,
+      var(--skate) 1rem);
 }
 
 .skate .skate-boot-front {
@@ -5519,11 +5556,9 @@ footer a {
   left: 3rem;
   height: 7rem;
   width: 9rem;
-  background: radial-gradient(
-    circle at 9rem 0,
-    transparent 5rem,
-    var(--skate-dark) 5rem
-  );
+  background: radial-gradient(circle at 9rem 0,
+      transparent 5rem,
+      var(--skate-dark) 5rem);
   transform-origin: right center;
   transform: scaleX(0.8);
 }
@@ -5592,54 +5627,38 @@ footer a {
   align-items: center;
   justify-content: center;
   background-color: #001122;
-  background: repeating-radial-gradient(
-      circle at 1rem 1rem,
+  background: repeating-radial-gradient(circle at 1rem 1rem,
       rgba(255, 255, 255, 0.3) 0,
       transparent 0.2rem,
-      transparent 100%
-    ),
-    repeating-radial-gradient(
-      circle at 4rem 2rem,
+      transparent 100%),
+    repeating-radial-gradient(circle at 4rem 2rem,
       rgba(255, 255, 255, 0.5) 0,
       transparent 0.1rem,
-      transparent 100%
-    ),
-    repeating-radial-gradient(
-      circle at 9rem 7rem,
+      transparent 100%),
+    repeating-radial-gradient(circle at 9rem 7rem,
       rgba(255, 255, 255, 0.5) 0,
       transparent 0.1rem,
-      transparent 100%
-    ),
-    repeating-radial-gradient(
-      circle at 7rem 4.5rem,
+      transparent 100%),
+    repeating-radial-gradient(circle at 7rem 4.5rem,
       rgba(255, 255, 255, 0.5) 0,
       transparent 0.15rem,
-      transparent 100%
-    ),
-    repeating-radial-gradient(
-      circle at 3rem 9rem,
+      transparent 100%),
+    repeating-radial-gradient(circle at 3rem 9rem,
       rgba(255, 255, 255, 0.5) 0,
       transparent 0.1rem,
-      transparent 100%
-    ),
-    repeating-radial-gradient(
-      circle at 12rem 2.5rem,
+      transparent 100%),
+    repeating-radial-gradient(circle at 12rem 2.5rem,
       rgba(255, 255, 255, 0.5) 0,
       transparent 0.25rem,
-      transparent 100%
-    ),
-    repeating-radial-gradient(
-      circle at 11rem 8rem,
+      transparent 100%),
+    repeating-radial-gradient(circle at 11rem 8rem,
       rgba(255, 255, 255, 0.2) 0,
       transparent 0.25rem,
-      transparent 100%
-    ),
-    repeating-radial-gradient(
-      circle at 2rem 5rem,
+      transparent 100%),
+    repeating-radial-gradient(circle at 2rem 5rem,
       rgba(255, 255, 255, 0.2) 0,
       transparent 0.25rem,
-      transparent 100%
-    ),
+      transparent 100%),
     #001122;
   background-size: 14rem 10rem;
   height: 100%;
@@ -5655,8 +5674,7 @@ footer a {
   position: relative;
   width: 12rem;
   height: 10rem;
-  filter: drop-shadow(1px 1px 3px rgba(255, 255, 255, 0.5))
-    drop-shadow(1px -1px 3px rgba(255, 255, 255, 0.5));
+  filter: drop-shadow(1px 1px 3px rgba(255, 255, 255, 0.5)) drop-shadow(1px -1px 3px rgba(255, 255, 255, 0.5));
   transform: scale(0.5) translateX(-0.7rem) translateY(2.5rem);
 }
 
@@ -5714,18 +5732,16 @@ footer a {
   width: 8rem;
   height: 8rem;
   background-color: rgba(255, 0, 0, 0.2);
-  background: radial-gradient(
-    circle at 0 100%,
-    transparent 0,
-    transparent 5rem,
-    var(--shooting-star-tail-1) 5rem,
-    var(--shooting-star-tail-1) 6rem,
-    var(--shooting-star-tail-2) 6rem,
-    var(--shooting-star-tail-2) 7rem,
-    var(--shooting-star-tail-3) 7rem,
-    var(--shooting-star-tail-3) 8rem,
-    transparent 8.05rem
-  );
+  background: radial-gradient(circle at 0 100%,
+      transparent 0,
+      transparent 5rem,
+      var(--shooting-star-tail-1) 5rem,
+      var(--shooting-star-tail-1) 6rem,
+      var(--shooting-star-tail-2) 6rem,
+      var(--shooting-star-tail-2) 7rem,
+      var(--shooting-star-tail-3) 7rem,
+      var(--shooting-star-tail-3) 8rem,
+      transparent 8.05rem);
   transform-origin: top left;
   transform: scale(0.8) rotate(-10deg) scaleY(0.6);
 }
@@ -5870,6 +5886,7 @@ footer a {
 .drum .side .pattern.pattern-1 {
   transform: translateX(1.6rem) translateY(0.6rem) rotate(-20deg);
 }
+
 .drum .side .pattern.pattern-1::after {
   top: 0.3rem;
 }
@@ -5877,6 +5894,7 @@ footer a {
 .drum .side .pattern.pattern-2 {
   transform: translateX(4.4rem) translateY(0.6rem) rotate(20deg);
 }
+
 .drum .side .pattern.pattern-2::after {
   top: 7.6rem;
   left: -0.2rem;
@@ -5885,6 +5903,7 @@ footer a {
 .drum .side .pattern.pattern-3 {
   transform: translateX(6.3rem) translateY(0.6rem) rotate(-20deg);
 }
+
 .drum .side .pattern.pattern-3::after {
   top: 1.3rem;
   left: -0.05rem;
@@ -5893,6 +5912,7 @@ footer a {
 .drum .side .pattern.pattern-4 {
   transform: translateX(9.3rem) translateY(0.6rem) rotate(20deg);
 }
+
 .drum .side .pattern.pattern-4::after {
   top: 8rem;
   left: -0.1rem;
@@ -5901,6 +5921,7 @@ footer a {
 .drum .side .pattern.pattern-5 {
   transform: translateX(11.3rem) translateY(0.6rem) rotate(-20deg);
 }
+
 .drum .side .pattern.pattern-5::after {
   top: 1.3rem;
   left: -0.1rem;
@@ -5909,10 +5930,12 @@ footer a {
 .drum .side .pattern.pattern-6 {
   transform: translateX(14rem) translateY(0.6rem) rotate(20deg);
 }
+
 .drum .side .pattern.pattern-6::before {
   top: 7.6rem;
   left: -0.1rem;
 }
+
 .drum .side .pattern.pattern-6::after {
   top: 0.4rem;
 }
@@ -6018,9 +6041,11 @@ footer a {
   0% {
     transform: rotate(-170deg) translateX(1rem);
   }
+
   50% {
     transform: rotate(-150deg) translateX(0);
   }
+
   100% {
     transform: rotate(-170deg) translateX(1rem);
   }
@@ -6030,9 +6055,11 @@ footer a {
   0% {
     transform: rotate(-170deg) translateX(1rem);
   }
+
   50% {
     transform: rotate(-150deg) translateX(0);
   }
+
   100% {
     transform: rotate(-170deg) translateX(1rem);
   }
@@ -6043,10 +6070,12 @@ footer a {
     transform: scale(1.6);
     opacity: 0.3;
   }
+
   50% {
     transform: scale(0.6);
     opacity: 1;
   }
+
   100% {
     transform: scale(1.6);
     opacity: 0.3;
@@ -6058,10 +6087,12 @@ footer a {
     transform: scale(1.6);
     opacity: 0.3;
   }
+
   50% {
     transform: scale(0.6);
     opacity: 1;
   }
+
   100% {
     transform: scale(1.6);
     opacity: 0.3;
@@ -6072,9 +6103,11 @@ footer a {
   0% {
     transform: rotate(-30deg) translateX(0);
   }
+
   50% {
     transform: rotate(-10deg) translateX(1rem);
   }
+
   100% {
     transform: rotate(-30deg) translateX(0);
   }
@@ -6084,9 +6117,11 @@ footer a {
   0% {
     transform: rotate(-30deg) translateX(0);
   }
+
   50% {
     transform: rotate(-10deg) translateX(1rem);
   }
+
   100% {
     transform: rotate(-30deg) translateX(0);
   }
@@ -6097,10 +6132,12 @@ footer a {
     transform: scale(0.6);
     opacity: 1;
   }
+
   50% {
     transform: scale(1.6);
     opacity: 0.3;
   }
+
   100% {
     transform: scale(0.6);
     opacity: 1;
@@ -6112,10 +6149,12 @@ footer a {
     transform: scale(0.6);
     opacity: 1;
   }
+
   50% {
     transform: scale(1.6);
     opacity: 0.3;
   }
+
   100% {
     transform: scale(0.6);
     opacity: 1;
@@ -6179,11 +6218,9 @@ footer a {
   bottom: 0;
   width: 0.4rem;
   height: 10rem;
-  background: linear-gradient(
-    to bottom,
-    var(--sparkler-ember) 0.3rem,
-    var(--sparkler-gun-powder) 0.4rem
-  );
+  background: linear-gradient(to bottom,
+      var(--sparkler-ember) 0.3rem,
+      var(--sparkler-gun-powder) 0.4rem);
   border-radius: 0.5rem;
   -webkit-animation: sparkler-burn-anim 20s infinite;
   animation: sparkler-burn-anim 20s infinite;
@@ -6240,6 +6277,7 @@ footer a {
   0% {
     height: 10rem;
   }
+
   100% {
     height: 0;
   }
@@ -6249,6 +6287,7 @@ footer a {
   0% {
     height: 10rem;
   }
+
   100% {
     height: 0;
   }
@@ -6258,6 +6297,7 @@ footer a {
   0% {
     bottom: 11.5rem;
   }
+
   100% {
     bottom: 1.5rem;
   }
@@ -6267,6 +6307,7 @@ footer a {
   0% {
     bottom: 11.5rem;
   }
+
   100% {
     bottom: 1.5rem;
   }
@@ -6276,12 +6317,15 @@ footer a {
   0% {
     transform: scale(1);
   }
+
   25% {
     transform: scale(1.1);
   }
+
   75% {
     transform: scale(0.9);
   }
+
   100% {
     transform: scale(1);
   }
@@ -6291,12 +6335,15 @@ footer a {
   0% {
     transform: scale(1);
   }
+
   25% {
     transform: scale(1.1);
   }
+
   75% {
     transform: scale(0.9);
   }
+
   100% {
     transform: scale(1);
   }
@@ -6307,22 +6354,27 @@ footer a {
     transform: translateY(-0.5rem) scaleY(0.25);
     opacity: 0;
   }
+
   10% {
     transform: translateY(-1rem) scaleY(0.5);
     opacity: 0.35;
   }
+
   30% {
     transform: translateY(-2rem) scaleY(0.5);
     opacity: 0.7;
   }
+
   50% {
     transform: translateY(-4rem) scaleY(1.5);
     opacity: 0.7;
   }
+
   51% {
     opacity: 0;
     transform: translateY(-4rem) scaleY(1);
   }
+
   100% {
     opacity: 0;
     transform: translateY(0) scaleY(0.25);
@@ -6334,22 +6386,27 @@ footer a {
     transform: translateY(-0.5rem) scaleY(0.25);
     opacity: 0;
   }
+
   10% {
     transform: translateY(-1rem) scaleY(0.5);
     opacity: 0.35;
   }
+
   30% {
     transform: translateY(-2rem) scaleY(0.5);
     opacity: 0.7;
   }
+
   50% {
     transform: translateY(-4rem) scaleY(1.5);
     opacity: 0.7;
   }
+
   51% {
     opacity: 0;
     transform: translateY(-4rem) scaleY(1);
   }
+
   100% {
     opacity: 0;
     transform: translateY(0) scaleY(0.25);
@@ -6377,8 +6434,7 @@ footer a {
   width: 8rem;
   height: 10rem;
   border-radius: 4rem 4rem 0 0;
-  background: linear-gradient(135deg, var(--pom-hat-green) 25%, transparent 25%) -0.5rem
-      0,
+  background: linear-gradient(135deg, var(--pom-hat-green) 25%, transparent 25%) -0.5rem 0,
     linear-gradient(225deg, var(--pom-hat-green) 25%, transparent 25%) -0.5rem 0,
     linear-gradient(315deg, var(--pom-hat-green) 25%, transparent 25%),
     linear-gradient(45deg, var(--pom-hat-green) 25%, transparent 25%);
@@ -6393,22 +6449,20 @@ footer a {
   width: 8rem;
   height: 10rem;
   border-radius: 4rem 4rem 0 0;
-  background: linear-gradient(
-    to bottom,
-    var(--pom-hat-pink) 0,
-    var(--pom-hat-pink) 1.8rem,
-    var(--pom-hat-green) 1.8rem,
-    var(--pom-hat-green) 2.1rem,
-    var(--pom-hat-pink) 2.1rem,
-    var(--pom-hat-pink) 2.6rem,
-    var(--pom-hat-green) 2.6rem,
-    var(--pom-hat-green) 2.9rem,
-    var(--pom-hat-pink) 2.9rem,
-    var(--pom-hat-pink) 4.5rem,
-    transparent 4.5rem,
-    transparent 6.5rem,
-    var(--pom-hat-pink) 6.5rem
-  );
+  background: linear-gradient(to bottom,
+      var(--pom-hat-pink) 0,
+      var(--pom-hat-pink) 1.8rem,
+      var(--pom-hat-green) 1.8rem,
+      var(--pom-hat-green) 2.1rem,
+      var(--pom-hat-pink) 2.1rem,
+      var(--pom-hat-pink) 2.6rem,
+      var(--pom-hat-green) 2.6rem,
+      var(--pom-hat-green) 2.9rem,
+      var(--pom-hat-pink) 2.9rem,
+      var(--pom-hat-pink) 4.5rem,
+      transparent 4.5rem,
+      transparent 6.5rem,
+      var(--pom-hat-pink) 6.5rem);
 }
 
 .pom-hat::after {
@@ -6420,153 +6474,111 @@ footer a {
   width: 10rem;
   height: 13.8rem;
 
-  background: radial-gradient(
-      circle at 5rem 1.7rem,
+  background: radial-gradient(circle at 5rem 1.7rem,
       white 0,
       white 1.5rem,
       transparent 1.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 1rem 10.5rem,
+      transparent 100%),
+    radial-gradient(circle at 1rem 10.5rem,
       var(--pom-hat-purple) 0,
       var(--pom-hat-purple) 0.5rem,
       transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 1rem 11rem,
+      transparent 100%),
+    radial-gradient(circle at 1rem 11rem,
       var(--pom-hat-purple) 0,
       var(--pom-hat-purple) 0.5rem,
       transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 1rem 11.5rem,
+      transparent 100%),
+    radial-gradient(circle at 1rem 11.5rem,
       var(--pom-hat-purple) 0,
       var(--pom-hat-purple) 0.5rem,
       transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 1rem 12rem,
+      transparent 100%),
+    radial-gradient(circle at 1rem 12rem,
       var(--pom-hat-purple) 0,
       var(--pom-hat-purple) 0.5rem,
       transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 1rem 12.5rem,
+      transparent 100%),
+    radial-gradient(circle at 1rem 12.5rem,
       var(--pom-hat-purple) 0,
       var(--pom-hat-purple) 0.5rem,
       transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 9rem 10.5rem,
+      transparent 100%),
+    radial-gradient(circle at 9rem 10.5rem,
       var(--pom-hat-purple) 0,
       var(--pom-hat-purple) 0.5rem,
       transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 9rem 11rem,
+      transparent 100%),
+    radial-gradient(circle at 9rem 11rem,
       var(--pom-hat-purple) 0,
       var(--pom-hat-purple) 0.5rem,
       transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 9rem 11.5rem,
+      transparent 100%),
+    radial-gradient(circle at 9rem 11.5rem,
       var(--pom-hat-purple) 0,
       var(--pom-hat-purple) 0.5rem,
       transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 9rem 12rem,
+      transparent 100%),
+    radial-gradient(circle at 9rem 12rem,
       var(--pom-hat-purple) 0,
       var(--pom-hat-purple) 0.5rem,
       transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 9rem 12.5rem,
+      transparent 100%),
+    radial-gradient(circle at 9rem 12.5rem,
       var(--pom-hat-purple) 0,
       var(--pom-hat-purple) 0.5rem,
       transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 1.5rem 10.5rem,
+      transparent 100%),
+    radial-gradient(circle at 1.5rem 10.5rem,
       var(--pom-hat-purple) 0,
       var(--pom-hat-purple) 0.5rem,
       transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 1.5rem 12.2rem,
+      transparent 100%),
+    radial-gradient(circle at 1.5rem 12.2rem,
       var(--pom-hat-purple) 0,
       var(--pom-hat-purple) 0.8rem,
       transparent 0.8rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 8.5rem 10.5rem,
+      transparent 100%),
+    radial-gradient(circle at 8.5rem 10.5rem,
       var(--pom-hat-purple) 0,
       var(--pom-hat-purple) 0.5rem,
       transparent 0.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 8.5rem 12.2rem,
+      transparent 100%),
+    radial-gradient(circle at 8.5rem 12.2rem,
       var(--pom-hat-purple) 0,
       var(--pom-hat-purple) 0.8rem,
       transparent 0.8rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 2.5rem 11.4rem,
+      transparent 100%),
+    radial-gradient(circle at 2.5rem 11.4rem,
       var(--pom-hat-purple) 0,
       var(--pom-hat-purple) 1.5rem,
       transparent 1.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 3.5rem 11.4rem,
+      transparent 100%),
+    radial-gradient(circle at 3.5rem 11.4rem,
       var(--pom-hat-purple) 0,
       var(--pom-hat-purple) 1.5rem,
       transparent 1.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 4.5rem 11.4rem,
+      transparent 100%),
+    radial-gradient(circle at 4.5rem 11.4rem,
       var(--pom-hat-purple) 0,
       var(--pom-hat-purple) 1.5rem,
       transparent 1.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 5.5rem 11.4rem,
+      transparent 100%),
+    radial-gradient(circle at 5.5rem 11.4rem,
       var(--pom-hat-purple) 0,
       var(--pom-hat-purple) 1.5rem,
       transparent 1.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 6.5rem 11.4rem,
+      transparent 100%),
+    radial-gradient(circle at 6.5rem 11.4rem,
       var(--pom-hat-purple) 0,
       var(--pom-hat-purple) 1.5rem,
       transparent 1.5rem,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 7.5rem 11.4rem,
+      transparent 100%),
+    radial-gradient(circle at 7.5rem 11.4rem,
       var(--pom-hat-purple) 0,
       var(--pom-hat-purple) 1.5rem,
       transparent 1.5rem,
-      transparent 100%
-    );
+      transparent 100%);
 }
 
 /**
@@ -6655,42 +6667,30 @@ footer a {
   left: 1rem;
   width: 5rem;
   height: 3rem;
-  background: radial-gradient(
-      circle at 1rem 1.5rem,
+  background: radial-gradient(circle at 1rem 1.5rem,
       var(--toy-train-gray) 0,
       var(--toy-train-gray) 0.5rem,
-      transparent 1rem
-    ),
-    radial-gradient(
-      circle at 2rem 1rem,
+      transparent 1rem),
+    radial-gradient(circle at 2rem 1rem,
       var(--toy-train-gray) 0,
       var(--toy-train-gray) 0.5rem,
-      transparent 1rem
-    ),
-    radial-gradient(
-      circle at 3rem 1rem,
+      transparent 1rem),
+    radial-gradient(circle at 3rem 1rem,
       var(--toy-train-gray) 0,
       var(--toy-train-gray) 0.5rem,
-      transparent 1rem
-    ),
-    radial-gradient(
-      circle at 4rem 1.5rem,
+      transparent 1rem),
+    radial-gradient(circle at 4rem 1.5rem,
       var(--toy-train-gray) 0,
       var(--toy-train-gray) 0.5rem,
-      transparent 1rem
-    ),
-    radial-gradient(
-      circle at 2rem 2rem,
+      transparent 1rem),
+    radial-gradient(circle at 2rem 2rem,
       var(--toy-train-gray) 0,
       var(--toy-train-gray) 0.5rem,
-      transparent 1rem
-    ),
-    radial-gradient(
-      circle at 3rem 2rem,
+      transparent 1rem),
+    radial-gradient(circle at 3rem 2rem,
       var(--toy-train-gray) 0,
       var(--toy-train-gray) 0.5rem,
-      transparent 1rem
-    );
+      transparent 1rem);
   opacity: 0;
   -webkit-animation: train-smoke 3s infinite linear;
   animation: train-smoke 3s infinite linear;
@@ -6700,6 +6700,7 @@ footer a {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
+
 .toy-train .chimney .smoke:nth-child(3) {
   -webkit-animation-delay: 2s;
   animation-delay: 2s;
@@ -6803,6 +6804,7 @@ footer a {
 .toy-train .passanger-car .window:first-child {
   margin-left: 1.5rem;
 }
+
 .toy-train .passanger-car .window:last-child {
   margin-right: 1.5rem;
 }
@@ -6914,42 +6916,34 @@ footer a {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  background: radial-gradient(
-      circle at center,
+  background: radial-gradient(circle at center,
       var(--toy-train-gold) 10%,
       var(--toy-train-red) 10%,
       var(--toy-train-red) 25%,
       transparent 25%,
       transparent 55%,
-      var(--toy-train-red) 55%
-    ),
-    linear-gradient(
-      0deg,
+      var(--toy-train-red) 55%),
+    linear-gradient(0deg,
       transparent 0,
       transparent 45%,
       var(--toy-train-red) 45%,
       var(--toy-train-red) 55%,
       transparent 55%,
-      transparent 100%
-    ),
-    linear-gradient(
-      60deg,
+      transparent 100%),
+    linear-gradient(60deg,
       transparent 0,
       transparent 45%,
       var(--toy-train-red) 45%,
       var(--toy-train-red) 55%,
       transparent 55%,
-      transparent 100%
-    ),
-    linear-gradient(
-      120deg,
+      transparent 100%),
+    linear-gradient(120deg,
       transparent 0,
       transparent 45%,
       var(--toy-train-red) 45%,
       var(--toy-train-red) 55%,
       transparent 55%,
-      transparent 100%
-    );
+      transparent 100%);
 }
 
 .toy-train .locomotive .wheel:first-child {
@@ -7020,33 +7014,43 @@ footer a {
   0% {
     transform: translate(0.1rem, 0.1rem);
   }
+
   10% {
     transform: translate(-0.1rem, 0rem);
   }
+
   20% {
     transform: translate(0rem, -0.1rem);
   }
+
   30% {
     transform: translate(0.1rem, -0.1rem);
   }
+
   40% {
     transform: translate(-0.1rem, 0rem);
   }
+
   50% {
     transform: translate(0rem, -0.1rem);
   }
+
   60% {
     transform: translate(-0.1rem, 0rem);
   }
+
   70% {
     transform: translate(0rem, -0.1rem);
   }
+
   80% {
     transform: translate(-0.1rem, 0.1rem);
   }
+
   90% {
     transform: translate(-0.1rem, -0.1rem);
   }
+
   100% {
     transform: translate(0.1rem, 0.1rem);
   }
@@ -7056,33 +7060,43 @@ footer a {
   0% {
     transform: translate(0.1rem, 0.1rem);
   }
+
   10% {
     transform: translate(-0.1rem, 0rem);
   }
+
   20% {
     transform: translate(0rem, -0.1rem);
   }
+
   30% {
     transform: translate(0.1rem, -0.1rem);
   }
+
   40% {
     transform: translate(-0.1rem, 0rem);
   }
+
   50% {
     transform: translate(0rem, -0.1rem);
   }
+
   60% {
     transform: translate(-0.1rem, 0rem);
   }
+
   70% {
     transform: translate(0rem, -0.1rem);
   }
+
   80% {
     transform: translate(-0.1rem, 0.1rem);
   }
+
   90% {
     transform: translate(-0.1rem, -0.1rem);
   }
+
   100% {
     transform: translate(0.1rem, 0.1rem);
   }
@@ -7093,18 +7107,22 @@ footer a {
     transform: translate(-1.5rem, 0.5rem) scale(0.5);
     opacity: 0;
   }
+
   10% {
     transform: translate(0rem, 0rem) scale(0.7);
     opacity: 0.5;
   }
+
   20% {
     transform: translate(2rem, -1rem) scale(1);
     opacity: 1;
   }
+
   70% {
     transform: translate(15rem, -4rem) scale(1.3);
     opacity: 1;
   }
+
   100% {
     transform: translate(20rem, -6rem) scale(1.5);
     opacity: 0;
@@ -7116,18 +7134,22 @@ footer a {
     transform: translate(-1.5rem, 0.5rem) scale(0.5);
     opacity: 0;
   }
+
   10% {
     transform: translate(0rem, 0rem) scale(0.7);
     opacity: 0.5;
   }
+
   20% {
     transform: translate(2rem, -1rem) scale(1);
     opacity: 1;
   }
+
   70% {
     transform: translate(15rem, -4rem) scale(1.3);
     opacity: 1;
   }
+
   100% {
     transform: translate(20rem, -6rem) scale(1.5);
     opacity: 0;
@@ -7167,27 +7189,25 @@ footer a {
   height: 10rem;
   margin-left: 55rem;
   width: 700rem;
-  background: linear-gradient(
-    to bottom,
-    black 0,
-    black 2%,
-    transparent 2%,
-    transparent 24.5%,
-    black 24.5%,
-    black 26.5%,
-    transparent 26.5%,
-    transparent 49%,
-    black 49%,
-    black 51%,
-    transparent 51%,
-    transparent 73.5%,
-    black 73.5%,
-    black 75.5%,
-    transparent 75.5%,
-    transparent 98%,
-    black 98%,
-    black 100%
-  );
+  background: linear-gradient(to bottom,
+      black 0,
+      black 2%,
+      transparent 2%,
+      transparent 24.5%,
+      black 24.5%,
+      black 26.5%,
+      transparent 26.5%,
+      transparent 49%,
+      black 49%,
+      black 51%,
+      transparent 51%,
+      transparent 73.5%,
+      black 73.5%,
+      black 75.5%,
+      transparent 75.5%,
+      transparent 98%,
+      black 98%,
+      black 100%);
 
   transform: translateX(-540rem);
   -webkit-animation: jingle-bells-melody 23s linear;
@@ -7275,8 +7295,8 @@ footer a {
   margin-top: -4rem;
 }
 
-.calendar-grid :checked ~ .inside .jingle-bells .staff-lines,
-.calendar-grid :checked ~ .inside .jingle-bells .note {
+.calendar-grid :checked~.inside .jingle-bells .staff-lines,
+.calendar-grid :checked~.inside .jingle-bells .note {
   -webkit-animation-play-state: running;
   animation-play-state: running;
 }
@@ -7285,194 +7305,242 @@ footer a {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
+
 .jingle-bells .note.note--a2 {
   -webkit-animation-delay: 1.3s;
   animation-delay: 1.3s;
 }
+
 .jingle-bells .note.note--a3 {
   -webkit-animation-delay: 1.7s;
   animation-delay: 1.7s;
 }
+
 .jingle-bells .note.note--a4 {
   -webkit-animation-delay: 2.4s;
   animation-delay: 2.4s;
 }
+
 .jingle-bells .note.note--a5 {
   -webkit-animation-delay: 2.7s;
   animation-delay: 2.7s;
 }
+
 .jingle-bells .note.note--a6 {
   -webkit-animation-delay: 3.1s;
   animation-delay: 3.1s;
 }
+
 .jingle-bells .note.note--a7 {
   -webkit-animation-delay: 3.7s;
   animation-delay: 3.7s;
 }
+
 .jingle-bells .note.note--a8 {
   -webkit-animation-delay: 4s;
   animation-delay: 4s;
 }
+
 .jingle-bells .note.note--a9 {
   -webkit-animation-delay: 4.4s;
   animation-delay: 4.4s;
 }
+
 .jingle-bells .note.note--a10 {
   -webkit-animation-delay: 4.9s;
   animation-delay: 4.9s;
 }
+
 .jingle-bells .note.note--a11 {
   -webkit-animation-delay: 5.2s;
   animation-delay: 5.2s;
 }
+
 .jingle-bells .note.note--a12 {
   -webkit-animation-delay: 6.6s;
   animation-delay: 6.6s;
 }
+
 .jingle-bells .note.note--a13 {
   -webkit-animation-delay: 6.9s;
   animation-delay: 6.9s;
 }
+
 .jingle-bells .note.note--a14 {
   -webkit-animation-delay: 7.3s;
   animation-delay: 7.3s;
 }
+
 .jingle-bells .note.note--a15 {
   -webkit-animation-delay: 7.9s;
   animation-delay: 7.9s;
 }
+
 .jingle-bells .note.note--a16 {
   -webkit-animation-delay: 8.2s;
   animation-delay: 8.2s;
 }
+
 .jingle-bells .note.note--a17 {
   -webkit-animation-delay: 8.5s;
   animation-delay: 8.5s;
 }
+
 .jingle-bells .note.note--a18 {
   -webkit-animation-delay: 8.8s;
   animation-delay: 8.8s;
 }
+
 .jingle-bells .note.note--a19 {
   -webkit-animation-delay: 9s;
   animation-delay: 9s;
 }
+
 .jingle-bells .note.note--a20 {
   -webkit-animation-delay: 9.3s;
   animation-delay: 9.3s;
 }
+
 .jingle-bells .note.note--a21 {
   -webkit-animation-delay: 9.6s;
   animation-delay: 9.6s;
 }
+
 .jingle-bells .note.note--a22 {
   -webkit-animation-delay: 9.9s;
   animation-delay: 9.9s;
 }
+
 .jingle-bells .note.note--a23 {
   -webkit-animation-delay: 10.3s;
   animation-delay: 10.3s;
 }
+
 .jingle-bells .note.note--a24 {
   -webkit-animation-delay: 10.7s;
   animation-delay: 10.7s;
 }
+
 .jingle-bells .note.note--a25 {
   -webkit-animation-delay: 11.4s;
   animation-delay: 11.4s;
 }
+
 .jingle-bells .note.note--a26 {
   -webkit-animation-delay: 12.4s;
   animation-delay: 12.4s;
 }
+
 .jingle-bells .note.note--a27 {
   -webkit-animation-delay: 12.7s;
   animation-delay: 12.7s;
 }
+
 .jingle-bells .note.note--a28 {
   -webkit-animation-delay: 13.1s;
   animation-delay: 13.1s;
 }
+
 .jingle-bells .note.note--a29 {
   -webkit-animation-delay: 13.8s;
   animation-delay: 13.8s;
 }
+
 .jingle-bells .note.note--a30 {
   -webkit-animation-delay: 14.1s;
   animation-delay: 14.1s;
 }
+
 .jingle-bells .note.note--a31 {
   -webkit-animation-delay: 14.5s;
   animation-delay: 14.5s;
 }
+
 .jingle-bells .note.note--a32 {
   -webkit-animation-delay: 15.1s;
   animation-delay: 15.1s;
 }
+
 .jingle-bells .note.note--a33 {
   -webkit-animation-delay: 15.4s;
   animation-delay: 15.4s;
 }
+
 .jingle-bells .note.note--a34 {
   -webkit-animation-delay: 15.8s;
   animation-delay: 15.8s;
 }
+
 .jingle-bells .note.note--a35 {
   -webkit-animation-delay: 16.3s;
   animation-delay: 16.3s;
 }
+
 .jingle-bells .note.note--a36 {
   -webkit-animation-delay: 16.6s;
   animation-delay: 16.6s;
 }
+
 .jingle-bells .note.note--a37 {
   -webkit-animation-delay: 18s;
   animation-delay: 18s;
 }
+
 .jingle-bells .note.note--a38 {
   -webkit-animation-delay: 18.3s;
   animation-delay: 18.3s;
 }
+
 .jingle-bells .note.note--a39 {
   -webkit-animation-delay: 18.7s;
   animation-delay: 18.7s;
 }
+
 .jingle-bells .note.note--a40 {
   -webkit-animation-delay: 19.3s;
   animation-delay: 19.3s;
 }
+
 .jingle-bells .note.note--a41 {
   -webkit-animation-delay: 19.6s;
   animation-delay: 19.6s;
 }
+
 .jingle-bells .note.note--a42 {
   -webkit-animation-delay: 19.9s;
   animation-delay: 19.9s;
 }
+
 .jingle-bells .note.note--a43 {
   -webkit-animation-delay: 20.3s;
   animation-delay: 20.3s;
 }
+
 .jingle-bells .note.note--a44 {
   -webkit-animation-delay: 20.4s;
   animation-delay: 20.4s;
 }
+
 .jingle-bells .note.note--a45 {
   -webkit-animation-delay: 20.7s;
   animation-delay: 20.7s;
 }
+
 .jingle-bells .note.note--a46 {
   -webkit-animation-delay: 21s;
   animation-delay: 21s;
 }
+
 .jingle-bells .note.note--a47 {
   -webkit-animation-delay: 21.3s;
   animation-delay: 21.3s;
 }
+
 .jingle-bells .note.note--a48 {
   -webkit-animation-delay: 21.7s;
   animation-delay: 21.7s;
 }
+
 .jingle-bells .note.note--a49 {
   -webkit-animation-delay: 22.1s;
   animation-delay: 22.1s;
@@ -7482,6 +7550,7 @@ footer a {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-540rem);
   }
@@ -7491,6 +7560,7 @@ footer a {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-540rem);
   }
@@ -7501,10 +7571,12 @@ footer a {
     filter: drop-shadow(0 0 0 black);
     transform: scale(1) translateY(0);
   }
+
   50% {
     filter: drop-shadow(0 -1rem 1.3rem black);
     transform: scale(1.2) translateY(-1.5rem);
   }
+
   100% {
     filter: drop-shadow(0 -2rem 2rem transparent);
     transform: scale(1) translateY(0);
@@ -7516,10 +7588,12 @@ footer a {
     filter: drop-shadow(0 0 0 black);
     transform: scale(1) translateY(0);
   }
+
   50% {
     filter: drop-shadow(0 -1rem 1.3rem black);
     transform: scale(1.2) translateY(-1.5rem);
   }
+
   100% {
     filter: drop-shadow(0 -2rem 2rem transparent);
     transform: scale(1) translateY(0);
@@ -7583,14 +7657,12 @@ footer a {
   left: -2.3rem;
   width: 3rem;
   height: 3rem;
-  background: radial-gradient(
-    circle at 100% 0,
-    transparent,
-    transparent 2.3rem,
-    var(--rudolph-antler) 2.3rem,
-    var(--rudolph-antler) 3rem,
-    transparent 3rem
-  );
+  background: radial-gradient(circle at 100% 0,
+      transparent,
+      transparent 2.3rem,
+      var(--rudolph-antler) 2.3rem,
+      var(--rudolph-antler) 3rem,
+      transparent 3rem);
 }
 
 .reindeer .antler .hook:nth-child(2) {
@@ -7598,14 +7670,12 @@ footer a {
   top: -1.7rem;
   width: 2.4rem;
   height: 2.4rem;
-  background: radial-gradient(
-    circle at 100% 0,
-    transparent,
-    transparent 1.7rem,
-    var(--rudolph-antler) 1.7rem,
-    var(--rudolph-antler) 2.4rem,
-    transparent 2.4rem
-  );
+  background: radial-gradient(circle at 100% 0,
+      transparent,
+      transparent 1.7rem,
+      var(--rudolph-antler) 1.7rem,
+      var(--rudolph-antler) 2.4rem,
+      transparent 2.4rem);
 }
 
 .reindeer .antler .hook:nth-child(3) {
@@ -7614,14 +7684,12 @@ footer a {
   left: 1.5rem;
   width: 2rem;
   height: 2rem;
-  background: radial-gradient(
-    circle at 100% 0,
-    transparent,
-    transparent 1.3rem,
-    var(--rudolph-antler) 1.3rem,
-    var(--rudolph-antler) 2rem,
-    transparent 2rem
-  );
+  background: radial-gradient(circle at 100% 0,
+      transparent,
+      transparent 1.3rem,
+      var(--rudolph-antler) 1.3rem,
+      var(--rudolph-antler) 2rem,
+      transparent 2rem);
 }
 
 .reindeer .antler .hook::before {
@@ -7661,13 +7729,11 @@ footer a {
   width: 5rem;
   height: 5.4rem;
   border-radius: 50%;
-  background: radial-gradient(
-    circle at center,
-    transparent,
-    transparent 2.5rem,
-    var(--rudolph-body-dark) 2.5rem,
-    var(--rudolph-body-dark) 5rem
-  );
+  background: radial-gradient(circle at center,
+      transparent,
+      transparent 2.5rem,
+      var(--rudolph-body-dark) 2.5rem,
+      var(--rudolph-body-dark) 5rem);
   background-position: 0 0.2rem;
   transform: scaleX(1.1) rotate(45deg) scaleX(1.1) scale(0.9);
 }
@@ -7780,14 +7846,12 @@ footer a {
   left: 0.8rem;
   width: 2rem;
   height: 2rem;
-  background: radial-gradient(
-    circle at 100% 0,
-    transparent,
-    transparent 1.15rem,
-    var(--rudolph-leg) 1.2rem,
-    var(--rudolph-leg) 2rem,
-    transparent 2.05rem
-  );
+  background: radial-gradient(circle at 100% 0,
+      transparent,
+      transparent 1.15rem,
+      var(--rudolph-leg) 1.2rem,
+      var(--rudolph-leg) 2rem,
+      transparent 2.05rem);
   transform: scaleX(0.7) rotate(10deg);
 }
 
@@ -7962,9 +8026,11 @@ footer a {
 .christmas-tree .branch:nth-child(3n + 2) {
   background-color: var(--christmas-tree-green-2);
 }
+
 .christmas-tree .branch:nth-child(3n + 1) {
   background-color: var(--christmas-tree-green-3);
 }
+
 .christmas-tree .branch:nth-child(4n + 2) {
   background-color: var(--christmas-tree-green-4);
 }
@@ -7982,9 +8048,11 @@ footer a {
 .christmas-tree .ct-ornament:nth-child(4n + 0) {
   background-color: var(--christmas-tree-ornament-2);
 }
+
 .christmas-tree .ct-ornament:nth-child(4n + 1) {
   background-color: var(--christmas-tree-ornament-3);
 }
+
 .christmas-tree .ct-ornament:nth-child(4n + 2) {
   background-color: var(--christmas-tree-ornament-4);
 }
@@ -8025,6 +8093,7 @@ footer a {
   0% {
     transform: translateX(100px) rotateX(60deg) rotateZ(0);
   }
+
   99.99999% {
     transform: translateX(100px) rotateX(60deg) rotateZ(360deg);
   }
@@ -8034,6 +8103,7 @@ footer a {
   0% {
     transform: translateX(100px) rotateX(60deg) rotateZ(0);
   }
+
   99.99999% {
     transform: translateX(100px) rotateX(60deg) rotateZ(360deg);
   }
@@ -8043,6 +8113,7 @@ footer a {
   0% {
     transform: rotateX(60deg) rotateZ(0);
   }
+
   99.99999% {
     transform: rotateX(60deg) rotateZ(360deg);
   }
@@ -8052,6 +8123,7 @@ footer a {
   0% {
     transform: rotateX(60deg) rotateZ(0);
   }
+
   99.99999% {
     transform: rotateX(60deg) rotateZ(360deg);
   }
@@ -8062,10 +8134,12 @@ footer a {
     transform: scale(1.1);
     opacity: 0.15;
   }
+
   50% {
     transform: scale(0.7);
     opacity: 0.25;
   }
+
   100% {
     transform: scale(1.1);
     opacity: 0.15;
@@ -8077,10 +8151,12 @@ footer a {
     transform: scale(1.1);
     opacity: 0.15;
   }
+
   50% {
     transform: scale(0.7);
     opacity: 0.25;
   }
+
   100% {
     transform: scale(1.1);
     opacity: 0.15;
