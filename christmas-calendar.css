@@ -10,11 +10,17 @@
 }
 
 body {
-  background: url(/christmas-background.jpg) repeat-y #8ac1d6;
+  background: url(/christmas-background.jpg) repeat #8ac1d6;
   background-size: 100%;
   font-family: "Mountains of Christmas", cursive;
   display: flex;
   flex-direction: column;
+}
+
+@media only screen and (min-width: 576px) {
+  body {
+    background-size: 400px;
+  }
 }
 
 body::before {
