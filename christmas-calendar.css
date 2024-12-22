@@ -89,6 +89,12 @@ body {
 .calendar-grid .title-3 {
   display: block;
   transform: rotate(-5deg);
+  margin-right: 1rem;
+}
+
+.calendar-grid .title-4 {
+  display: block;
+  transform: rotate(5deg);
 }
 
 /* opening/closing doors */
