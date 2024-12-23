@@ -9,7 +9,7 @@
 }
 
 body {
-  background: url(christmas-background.jpg) repeat #8ac1d6;
+  background: url(christmas-background.jpg) repeat var(--color-green);
   background-size: 100%;
   font-family: "Mountains of Christmas", cursive;
   display: flex;
