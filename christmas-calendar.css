@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
 
 :root {
   --color-red: #e63946;
@@ -54,7 +53,7 @@ body::before {
     "lights      lights lights"
     "title       title  title"
     "gingerbread santa  stocking"
-    "start       start  start";
+    ".           start  .";
 }
 
 .calendar-grid.start-screen .day {
@@ -63,9 +62,46 @@ body::before {
 
 .start-area {
   grid-area: start;
-  color: white;
+  height: 150px;
+  display: flex;
+  align-items: center;
 }
 
+.start-area button {
+  background-color: transparent;
+  border: dashed var(--color-green);
+  background-color: var(--color-matcha);
+  color: var(--color-green);
+  border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  font-family: "Mountains of Christmas", cursive;
+  font-size: 2rem;
+  padding: 0 0.25em;
+}
+
+.start-area button .icon {
+  width: 1em;
+  height: 1em;
+  transform: scale(0.8);
+  background-color: var(--color-green);
+}
+
+.start-area button .icon.left-icon {
+  -webkit-mask: url(/play.svg) no-repeat center;
+  mask: url(/play.svg) no-repeat center;
+}
+
+.start-area button .icon.right-icon {
+  -webkit-mask: url(/music.svg) no-repeat center;
+  mask: url(/music.svg) no-repeat center;
+}
+
+.start-area button .text {
+  position: relative;
+  top: 0.08em;
+}
 
 /* calendar layout */
 .calendar-grid.calendar-screen {
