@@ -9,7 +9,7 @@
 }
 
 body {
-  background: url(/christmas-background.jpg) repeat #8ac1d6;
+  background: url(christmas-background.jpg) repeat #8ac1d6;
   background-size: 100%;
   font-family: "Mountains of Christmas", cursive;
   display: flex;
@@ -91,13 +91,13 @@ body::before {
 }
 
 .start-area .start-button .icon.left-icon {
-  -webkit-mask: url(/play.svg) no-repeat center;
-  mask: url(/play.svg) no-repeat center;
+  -webkit-mask: url(play.svg) no-repeat center;
+  mask: url(play.svg) no-repeat center;
 }
 
 .start-area .start-button .icon.right-icon {
-  -webkit-mask: url(/music.svg) no-repeat center;
-  mask: url(/music.svg) no-repeat center;
+  -webkit-mask: url(music.svg) no-repeat center;
+  mask: url(music.svg) no-repeat center;
 }
 
 .start-area .start-button .text {
