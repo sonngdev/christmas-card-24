@@ -34,7 +34,7 @@ body::before {
   opacity: 0.75;
 }
 
-/* calendar layout */
+/* common grid styling */
 .calendar-grid {
   display: grid;
   width: 94%;
@@ -46,7 +46,27 @@ body::before {
   grid-gap: 1rem;
 
   transform: translate3d(0px, 0px, 0px);
+}
 
+/* start screen */
+.calendar-grid.start-screen {
+  grid-template-areas:
+    "title  title  title"
+    "start  start  start";
+}
+
+.calendar-grid.start-screen .day {
+  display: none;
+}
+
+.start-area {
+  grid-area: start;
+  color: white;
+}
+
+
+/* calendar layout */
+.calendar-grid.calendar-screen {
   grid-template-areas:
     "title  title  title"
     "day1   day2   day3"
@@ -60,6 +80,10 @@ body::before {
     "day25  day26  day27"
     "day28  day29  day30"
     "day31  day32  day33";
+}
+
+.calendar-grid.calendar-screen .start-area {
+  display: none;
 }
 
 /* media query */
