@@ -422,7 +422,7 @@ body::before {
   pointer-events: all;
 }
 
-.calendar-grid .title-container a {
+.calendar-grid .title-container .text {
   position: relative;
   display: inline-block;
   border-radius: 0.25rem;
@@ -432,9 +432,10 @@ body::before {
   font-size: 1.2rem;
   white-space: nowrap;
   text-decoration: none;
+  margin: 0;
 }
 
-.calendar-grid .title-container a::before {
+.calendar-grid .title-container .text::before {
   content: "";
   display: block;
   border-radius: 0.75rem;
@@ -510,6 +511,12 @@ body::before {
 
 .calendar-grid :checked~.inside {
   opacity: 1;
+}
+
+.calendar-grid .inside img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Calendar day positions and z-indexes */

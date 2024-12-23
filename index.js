@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const startButton = document.querySelector('button.start-button');
   const grid = document.querySelector('.calendar-grid');
-  const music = new Audio('https://res.cloudinary.com/dh7qbp6sy/video/upload/v1734902929/santa-tell-me-ariana-grande_gkiv6o.mp3');
+  const music = new Audio('https://res.cloudinary.com/dh7qbp6sy/video/upload/v1734902929/christmas-calendar-24/santa-tell-me-ariana-grande_gkiv6o.mp3');
   const playButton = document.querySelector('button.play-button');
 
   if (!startButton || !grid) {
