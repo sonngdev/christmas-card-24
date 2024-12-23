@@ -1,0 +1,1757 @@
+/**
+ * Day 11 - flickering Christmas lights
+ * https://codepen.io/johnnyfekete/pen/NWRdKjQ
+ */
+.christmas-lights-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  position: relative;
+}
+
+.christmas-lights {
+  --christmas-lights-size: 40px;
+  --christmas-lights-chord: #6b705c;
+  --christmas-lights-holder: #ced4da;
+  --christmas-lights-bulb-1: #f94144;
+  --christmas-lights-bulb-2: #90be6d;
+  --christmas-lights-bulb-3: #f9c74f;
+  --christmas-lights-bulb-4: #43aa8b;
+  --christmas-lights-bulb-5: #58b4d1;
+
+  height: 0rem;
+  transform: scale(0.1);
+}
+
+@media only screen and (min-width: 576px) {
+  .christmas-lights {
+    transform: scale(0.13) translateY(2rem);
+  }
+}
+
+.christmas-lights .chord {
+  width: var(--christmas-lights-size);
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.christmas-lights .chord::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: calc(var(--christmas-lights-size) * 3);
+  height: calc(var(--christmas-lights-size) * 3);
+  left: calc(var(--christmas-lights-size) * -1);
+  bottom: 0;
+  border-bottom: 2px solid var(--christmas-lights-chord);
+  border-radius: 50%;
+}
+
+.christmas-lights .bulb {
+  position: absolute;
+  z-index: 1;
+  width: 4rem;
+  height: 8rem;
+  background-color: red;
+  border-radius: 50% 50% 50% 50% / 30% 30% 60% 60%;
+  margin-top: 1rem;
+  left: calc(50% - 2rem);
+}
+
+.christmas-lights .bulb::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -10;
+  width: 1.5rem;
+  height: 1.1rem;
+  background-color: var(--christmas-lights-holder);
+  border-radius: 0.25rem 0.25rem 0.25rem;
+  top: -0.9rem;
+  left: 1.25rem;
+}
+
+.christmas-lights .bulb::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 1rem;
+  height: 1.8rem;
+  background-color: white;
+  border-radius: 50%;
+  top: 0.5rem;
+  left: 0.5rem;
+  transform: rotate(30deg);
+  opacity: 0.5;
+}
+
+.christmas-lights .bulb .light {
+  position: absolute;
+  top: -0.2rem;
+  left: -3rem;
+  z-index: -2;
+  width: 10rem;
+  height: 10rem;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.2;
+  -webkit-animation: bulb-flicker-animation 1s infinite;
+  animation: bulb-flicker-animation 1s infinite;
+}
+
+.christmas-lights .bulb.bulb-1 {
+  transform: rotate(12deg);
+  background-color: var(--christmas-lights-bulb-1);
+  margin-left: -24rem;
+  margin-top: -1.2rem;
+}
+
+.christmas-lights .bulb.bulb-1 .light {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.christmas-lights .bulb.bulb-2 {
+  transform: rotate(6deg);
+  background-color: var(--christmas-lights-bulb-2);
+  margin-left: -12rem;
+  margin-top: 0.35rem;
+}
+
+.christmas-lights .bulb.bulb-2 .light {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.christmas-lights .bulb.bulb-3 {
+  background-color: var(--christmas-lights-bulb-3);
+}
+
+.christmas-lights .bulb.bulb-4 {
+  transform: rotate(-6deg);
+  background-color: var(--christmas-lights-bulb-4);
+  margin-left: 12rem;
+  margin-top: 0.35rem;
+  /* -webkit-animation: broken-bulb-animation 1s infinite;
+  animation: broken-bulb-animation 1s infinite;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s; */
+}
+
+.christmas-lights .bulb.bulb-4 .light {
+  /* -webkit-animation: broken-bulb-flicker-animation 1s infinite;
+  animation: broken-bulb-flicker-animation 1s infinite;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s; */
+}
+
+.christmas-lights .bulb.bulb-5 {
+  transform: rotate(-12deg);
+  background-color: var(--christmas-lights-bulb-5);
+  margin-left: 24rem;
+  margin-top: -1.2rem;
+}
+
+.christmas-lights .bulb.bulb-5 .light {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+@-webkit-keyframes bulb-flicker-animation {
+  0% {
+    opacity: 0.1;
+  }
+
+  20% {
+    opacity: 0.09;
+  }
+
+  30% {
+    opacity: 0.1;
+  }
+
+  40% {
+    opacity: 0.08;
+  }
+
+  50% {
+    opacity: 0.1;
+  }
+
+  60% {
+    opacity: 0.11;
+  }
+
+  70% {
+    opacity: 0.11;
+  }
+
+  80% {
+    opacity: 0.09;
+  }
+
+  90% {
+    opacity: 0.12;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes bulb-flicker-animation {
+  0% {
+    opacity: 0.1;
+  }
+
+  20% {
+    opacity: 0.09;
+  }
+
+  30% {
+    opacity: 0.1;
+  }
+
+  40% {
+    opacity: 0.08;
+  }
+
+  50% {
+    opacity: 0.1;
+  }
+
+  60% {
+    opacity: 0.11;
+  }
+
+  70% {
+    opacity: 0.11;
+  }
+
+  80% {
+    opacity: 0.09;
+  }
+
+  90% {
+    opacity: 0.12;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@-webkit-keyframes broken-bulb-animation {
+  0% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 0.4;
+  }
+
+  40% {
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  60% {
+    opacity: 1;
+  }
+}
+
+@keyframes broken-bulb-animation {
+  0% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 0.4;
+  }
+
+  40% {
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  60% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes broken-bulb-flicker-animation {
+  0% {
+    opacity: 0.1;
+  }
+
+  20% {
+    opacity: 0.09;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.02;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0.11;
+  }
+
+  70% {
+    opacity: 0.11;
+  }
+
+  80% {
+    opacity: 0.09;
+  }
+
+  90% {
+    opacity: 0.12;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes broken-bulb-flicker-animation {
+  0% {
+    opacity: 0.1;
+  }
+
+  20% {
+    opacity: 0.09;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.02;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0.11;
+  }
+
+  70% {
+    opacity: 0.11;
+  }
+
+  80% {
+    opacity: 0.09;
+  }
+
+  90% {
+    opacity: 0.12;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+/**
+ * Day 21 - toy train
+ * https://codepen.io/johnnyfekete/pen/jOMGMJy
+ */
+.toy-train-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.toy-train {
+  --toy-train-red: #f45b69;
+  --toy-train-blue: #456990;
+  --toy-train-gold: #edaa41;
+  --toy-train-gray: #ababab;
+
+  width: 78px;
+  height: 40px;
+  position: relative;
+  transform: scale(0.08);
+}
+
+@media only screen and (min-width: 576px) {
+  .toy-train {
+    transform: scale(0.1);
+  }
+}
+
+.toy-train .locomotive {
+  position: absolute;
+  top: 5rem;
+  -webkit-animation: train-shake 1s infinite linear;
+  animation: train-shake 1s infinite linear;
+}
+
+.toy-train .passanger-car {
+  position: absolute;
+  top: 5rem;
+  left: 25rem;
+  -webkit-animation: train-shake 1s infinite linear;
+  animation: train-shake 1s infinite linear;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.toy-train .locomotive .chimney {
+  position: absolute;
+  left: 5rem;
+  width: 5.5rem;
+  height: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--toy-train-gold);
+}
+
+.toy-train .locomotive .chimney::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1rem;
+  left: 0.5rem;
+  width: 4.5rem;
+  height: 2rem;
+  border-radius: 0.5rem 0.5rem 3rem 3rem;
+  background-color: var(--toy-train-blue);
+}
+
+.toy-train .locomotive .chimney::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2.5rem;
+  left: 1.75rem;
+  width: 2rem;
+  height: 3rem;
+  background-color: var(--toy-train-blue);
+}
+
+.toy-train .chimney .smoke {
+  position: absolute;
+  top: -3rem;
+  left: 1rem;
+  width: 5rem;
+  height: 3rem;
+  background: radial-gradient(circle at 1rem 1.5rem,
+      var(--toy-train-gray) 0,
+      var(--toy-train-gray) 0.5rem,
+      transparent 1rem),
+    radial-gradient(circle at 2rem 1rem,
+      var(--toy-train-gray) 0,
+      var(--toy-train-gray) 0.5rem,
+      transparent 1rem),
+    radial-gradient(circle at 3rem 1rem,
+      var(--toy-train-gray) 0,
+      var(--toy-train-gray) 0.5rem,
+      transparent 1rem),
+    radial-gradient(circle at 4rem 1.5rem,
+      var(--toy-train-gray) 0,
+      var(--toy-train-gray) 0.5rem,
+      transparent 1rem),
+    radial-gradient(circle at 2rem 2rem,
+      var(--toy-train-gray) 0,
+      var(--toy-train-gray) 0.5rem,
+      transparent 1rem),
+    radial-gradient(circle at 3rem 2rem,
+      var(--toy-train-gray) 0,
+      var(--toy-train-gray) 0.5rem,
+      transparent 1rem);
+  opacity: 0;
+  -webkit-animation: train-smoke 3s infinite linear;
+  animation: train-smoke 3s infinite linear;
+}
+
+.toy-train .chimney .smoke:nth-child(2) {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.toy-train .chimney .smoke:nth-child(3) {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.toy-train .locomotive .boiler {
+  position: absolute;
+  z-index: 2;
+  top: 7rem;
+  left: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: var(--toy-train-gold);
+}
+
+.toy-train .locomotive .boiler::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2rem;
+  left: 0.75rem;
+  width: 9.5rem;
+  height: 6rem;
+  border-radius: 3rem 0 0 3rem;
+  background-color: var(--toy-train-red);
+}
+
+.toy-train .locomotive .boiler::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2.5rem;
+  left: 2.75rem;
+  width: 1rem;
+  height: 7rem;
+  border-radius: 1rem;
+  background-color: var(--toy-train-gold);
+}
+
+.toy-train .car-cabin {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 4;
+  top: 2rem;
+  width: 8em;
+  height: 6.5rem;
+  border-radius: 0 0;
+  background-color: var(--toy-train-blue);
+}
+
+.toy-train .car-cabin::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 4;
+  top: -2rem;
+  left: -1rem;
+  right: -1rem;
+  height: 2rem;
+  border-radius: 2rem 2rem 0.5rem 0.5rem;
+  background-color: var(--toy-train-red);
+}
+
+.toy-train .passanger-car .car-cabin {
+  width: 12rem;
+}
+
+.toy-train .car-cabin .window {
+  width: 3.5rem;
+  height: 4.5rem;
+  box-sizing: border-box;
+  border: 0.5rem solid var(--toy-train-gold);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.25rem;
+}
+
+.toy-train .side-bar {
+  position: absolute;
+  z-index: 5;
+  top: 8.5rem;
+  left: 4.75rem;
+  width: 16em;
+  height: 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background-color: var(--toy-train-gold);
+}
+
+.toy-train .locomotive .car-cabin {
+  left: 12.25rem;
+}
+
+.toy-train .passanger-car .side-bar {
+  left: -0.5rem;
+  width: 13rem;
+  border-radius: 0.5rem;
+}
+
+.toy-train .passanger-car .window:first-child {
+  margin-left: 1.5rem;
+}
+
+.toy-train .passanger-car .window:last-child {
+  margin-right: 1.5rem;
+}
+
+.toy-train .locomotive .car-cabin .window {
+  border-radius: 2rem 2rem 0.5rem 0.5rem;
+}
+
+.toy-train .car-bottom {
+  position: absolute;
+  z-index: 4;
+  top: 9rem;
+  height: 4rem;
+  border-radius: 0 0 1rem 1rem;
+  background-color: var(--toy-train-blue);
+}
+
+.toy-train .locomotive .car-bottom {
+  left: 4.75rem;
+  width: 15.5rem;
+}
+
+.toy-train .passanger-car .car-bottom {
+  width: 12rem;
+}
+
+.toy-train .bumper {
+  position: absolute;
+  right: -2rem;
+  top: 1rem;
+  width: 2rem;
+  height: 1rem;
+  background-color: var(--toy-train-blue);
+}
+
+.toy-train .bumper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0rem;
+  top: -0.5rem;
+  width: 1rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--toy-train-blue);
+}
+
+.toy-train .bumper.bumper--front {
+  left: -2rem;
+  right: auto;
+  transform: rotate(180deg);
+}
+
+.toy-train .front {
+  position: absolute;
+  z-index: 7;
+  left: 2.5rem;
+  top: 9.5rem;
+  width: 3.5rem;
+  height: 2.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--toy-train-gray);
+}
+
+.toy-train .snow-breaker {
+  position: absolute;
+  z-index: 6;
+  left: 0.75rem;
+  top: 11rem;
+  width: 3.5rem;
+  height: 2.25rem;
+  border-radius: 0.5rem;
+  border: 0.75rem solid var(--toy-train-red);
+  border-left: none;
+  border-top: none;
+}
+
+.toy-train .snow-breaker::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 5rem;
+  height: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--toy-train-red);
+  transform-origin: 0.375rem 0.375rem;
+  transform: rotate(-50deg);
+}
+
+.toy-train .snow-breaker::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 2rem;
+  width: 4rem;
+  height: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--toy-train-red);
+  transform-origin: 0.375rem 0.375rem;
+  transform: rotate(-70deg);
+}
+
+.wheel {
+  position: absolute;
+  top: 1rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: radial-gradient(circle at center,
+      var(--toy-train-gold) 10%,
+      var(--toy-train-red) 10%,
+      var(--toy-train-red) 25%,
+      transparent 25%,
+      transparent 55%,
+      var(--toy-train-red) 55%),
+    linear-gradient(0deg,
+      transparent 0,
+      transparent 45%,
+      var(--toy-train-red) 45%,
+      var(--toy-train-red) 55%,
+      transparent 55%,
+      transparent 100%),
+    linear-gradient(60deg,
+      transparent 0,
+      transparent 45%,
+      var(--toy-train-red) 45%,
+      var(--toy-train-red) 55%,
+      transparent 55%,
+      transparent 100%),
+    linear-gradient(120deg,
+      transparent 0,
+      transparent 45%,
+      var(--toy-train-red) 45%,
+      var(--toy-train-red) 55%,
+      transparent 55%,
+      transparent 100%);
+}
+
+.toy-train .locomotive .wheel:first-child {
+  left: 3rem;
+  -webkit-animation: train-wheel-1 2s infinite linear;
+  animation: train-wheel-1 2s infinite linear;
+}
+
+.toy-train .locomotive .wheel:nth-child(2) {
+  left: 10rem;
+  -webkit-animation: train-wheel-2 2s infinite linear;
+  animation: train-wheel-2 2s infinite linear;
+}
+
+.toy-train .passanger-car .wheel:first-child {
+  left: 0.5rem;
+  -webkit-animation: train-wheel-1 2s infinite linear;
+  animation: train-wheel-1 2s infinite linear;
+}
+
+.toy-train .passanger-car .wheel:nth-child(2) {
+  left: 6.5rem;
+  -webkit-animation: train-wheel-2 2s infinite linear;
+  animation: train-wheel-2 2s infinite linear;
+}
+
+@-webkit-keyframes train-wheel-1 {
+  0% {
+    transform: rotate(400deg);
+  }
+
+  100% {
+    transform: rotate(40deg);
+  }
+}
+
+@keyframes train-wheel-1 {
+  0% {
+    transform: rotate(400deg);
+  }
+
+  100% {
+    transform: rotate(40deg);
+  }
+}
+
+@-webkit-keyframes train-wheel-2 {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes train-wheel-2 {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes train-shake {
+  0% {
+    transform: translate(0.1rem, 0.1rem);
+  }
+
+  10% {
+    transform: translate(-0.1rem, 0rem);
+  }
+
+  20% {
+    transform: translate(0rem, -0.1rem);
+  }
+
+  30% {
+    transform: translate(0.1rem, -0.1rem);
+  }
+
+  40% {
+    transform: translate(-0.1rem, 0rem);
+  }
+
+  50% {
+    transform: translate(0rem, -0.1rem);
+  }
+
+  60% {
+    transform: translate(-0.1rem, 0rem);
+  }
+
+  70% {
+    transform: translate(0rem, -0.1rem);
+  }
+
+  80% {
+    transform: translate(-0.1rem, 0.1rem);
+  }
+
+  90% {
+    transform: translate(-0.1rem, -0.1rem);
+  }
+
+  100% {
+    transform: translate(0.1rem, 0.1rem);
+  }
+}
+
+@keyframes train-shake {
+  0% {
+    transform: translate(0.1rem, 0.1rem);
+  }
+
+  10% {
+    transform: translate(-0.1rem, 0rem);
+  }
+
+  20% {
+    transform: translate(0rem, -0.1rem);
+  }
+
+  30% {
+    transform: translate(0.1rem, -0.1rem);
+  }
+
+  40% {
+    transform: translate(-0.1rem, 0rem);
+  }
+
+  50% {
+    transform: translate(0rem, -0.1rem);
+  }
+
+  60% {
+    transform: translate(-0.1rem, 0rem);
+  }
+
+  70% {
+    transform: translate(0rem, -0.1rem);
+  }
+
+  80% {
+    transform: translate(-0.1rem, 0.1rem);
+  }
+
+  90% {
+    transform: translate(-0.1rem, -0.1rem);
+  }
+
+  100% {
+    transform: translate(0.1rem, 0.1rem);
+  }
+}
+
+@-webkit-keyframes train-smoke {
+  0% {
+    transform: translate(-1.5rem, 0.5rem) scale(0.5);
+    opacity: 0;
+  }
+
+  10% {
+    transform: translate(0rem, 0rem) scale(0.7);
+    opacity: 0.5;
+  }
+
+  20% {
+    transform: translate(2rem, -1rem) scale(1);
+    opacity: 1;
+  }
+
+  70% {
+    transform: translate(15rem, -4rem) scale(1.3);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(20rem, -6rem) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes train-smoke {
+  0% {
+    transform: translate(-1.5rem, 0.5rem) scale(0.5);
+    opacity: 0;
+  }
+
+  10% {
+    transform: translate(0rem, 0rem) scale(0.7);
+    opacity: 0.5;
+  }
+
+  20% {
+    transform: translate(2rem, -1rem) scale(1);
+    opacity: 1;
+  }
+
+  70% {
+    transform: translate(15rem, -4rem) scale(1.3);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(20rem, -6rem) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/**
+ * Day 3 - Stocking
+ * https://codepen.io/johnnyfekete/pen/BaLjoaV
+ */
+
+.stocking-container {
+  --stocking-background: #b2b09b;
+  --stocking-red: #a93f55;
+  --stocking-heel: #f2545b;
+  --stocking-blue: rgba(25, 50, 60, 0.4);
+  --stocking-wool: #f3f7f0;
+
+  display: flex;
+  width: 100%;
+  height: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.stocking {
+  position: absolute;
+  transform: rotate(20deg) scale(0.2);
+}
+
+@media only screen and (min-width: 576px) {
+  .stocking {
+    transform: rotate(20deg) scale(0.35);
+  }
+}
+
+.stocking .stocking-hanger {
+  width: 0.3rem;
+  height: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--stocking-heel);
+  transform-origin: bottom center;
+  transform: rotate(-20deg);
+}
+
+.stocking .stocking-wool {
+  position: relative;
+  z-index: 3;
+  width: 6.4rem;
+  height: 4rem;
+  margin-left: -0.2rem;
+  background-color: var(--stocking-wool);
+}
+
+.stocking .stocking-wool::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 7.4rem;
+  height: 5rem;
+  top: -0.5rem;
+  left: -0.5rem;
+  background-image: radial-gradient(var(--stocking-wool) 50%,
+      rgba(255, 255, 255, 0) 70%);
+  background-position: 0 0;
+  background-size: 0.925rem 1rem;
+}
+
+.stocking .stocking-leg {
+  position: relative;
+  width: 6rem;
+  height: 10rem;
+  border-radius: 0 0 0 2rem;
+  background: repeating-linear-gradient(20deg,
+      transparent,
+      transparent 10px,
+      var(--stocking-blue) 5px,
+      var(--stocking-blue) 20px),
+    repeating-linear-gradient(110deg,
+      transparent,
+      transparent 10px,
+      var(--stocking-blue) 5px,
+      var(--stocking-blue) 20px);
+  background-color: var(--stocking-red);
+  overflow: hidden;
+}
+
+.stocking .stocking-foot {
+  position: absolute;
+  width: 5rem;
+  height: 10rem;
+  border-radius: 2rem;
+  background: repeating-linear-gradient(20deg,
+      transparent,
+      transparent 10px,
+      var(--stocking-blue) 5px,
+      var(--stocking-blue) 20px),
+    repeating-linear-gradient(110deg,
+      transparent,
+      transparent 10px,
+      var(--stocking-blue) 5px,
+      var(--stocking-blue) 20px);
+  background-color: var(--stocking-red);
+  transform-origin: top left;
+  transform: rotate(-70deg) translateY(-0.6rem);
+  overflow: hidden;
+}
+
+.stocking .stocking-heel {
+  position: relative;
+  z-index: 2;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 4rem;
+  background-color: var(--stocking-heel);
+}
+
+.stocking .stocking-leg .stocking-heel {
+  position: absolute;
+  bottom: -3rem;
+  margin-left: -3rem;
+}
+
+.stocking .stocking-foot .stocking-heel {
+  margin-left: -3rem;
+  margin-top: -2rem;
+}
+
+/**
+ * Day 6 - Santa
+ * https://codepen.io/johnnyfekete/pen/oNzxMPW
+ */
+.santa-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  height: 10px;
+}
+
+.santa {
+  --santa-face: #f9dcc4;
+  --santa-beard: #ffffff;
+  --santa-moustache: #e0e0e0;
+  --santa-nose: #ffb5a7;
+  --santa-hat: #e63946;
+  --santa-border: #03071e;
+
+  width: 8em;
+  height: 8em;
+  position: relative;
+
+  filter: drop-shadow(6px 6px 0 rgba(0, 0, 0, 0.3));
+
+  transform: scale(0.33) rotate(-15deg) translateX(-30px);
+}
+
+@media only screen and (min-width: 576px) {
+  .santa {
+    transform: scale(0.4);
+  }
+}
+
+.santa .santa-head {
+  position: absolute;
+  top: 4em;
+  left: 1em;
+  width: 12em;
+  height: 12em;
+  filter: drop-shadow(2px 2px 0 var(--santa-border)) drop-shadow(-2px 2px 0 var(--santa-border)) drop-shadow(2px -2px 0 var(--santa-border)) drop-shadow(-2px -2px 0 var(--santa-border));
+}
+
+.santa .santa-beard {
+  position: absolute;
+  left: 5em;
+  width: 2em;
+  height: 12em;
+  background-color: var(--santa-beard);
+  border-radius: 1em;
+  transform-origin: center center;
+  height: 12em;
+}
+
+.santa .santa-beard:nth-child(2) {
+  transform: rotate(15deg);
+}
+
+.santa .santa-beard:nth-child(3) {
+  transform: rotate(30deg);
+}
+
+.santa .santa-beard:nth-child(4) {
+  transform: rotate(45deg);
+}
+
+.santa .santa-beard:nth-child(5) {
+  transform: rotate(60deg);
+}
+
+.santa .santa-beard:nth-child(6) {
+  transform: rotate(75deg);
+}
+
+.santa .santa-beard:nth-child(7) {
+  transform: rotate(90deg);
+}
+
+.santa .santa-beard:nth-child(8) {
+  transform: rotate(105deg);
+}
+
+.santa .santa-beard:nth-child(9) {
+  transform: rotate(120deg);
+}
+
+.santa .santa-beard:nth-child(10) {
+  transform: rotate(135deg);
+}
+
+.santa .santa-beard:nth-child(11) {
+  transform: rotate(150deg);
+}
+
+.santa .santa-beard:nth-child(12) {
+  transform: rotate(165deg);
+}
+
+.santa .santa-face {
+  position: absolute;
+  left: 2em;
+  top: 3em;
+  width: 8em;
+  height: 3em;
+  overflow: hidden;
+}
+
+.santa .santa-face::before {
+  display: block;
+  content: "";
+  position: relative;
+  box-sizing: border-box;
+  z-index: 1;
+  top: -2em;
+  width: 8em;
+  height: 8em;
+  background-color: var(--santa-face);
+  border-radius: 50%;
+  border: 2px solid var(--santa-border);
+}
+
+.santa .santa-moustache {
+  position: absolute;
+  z-index: 3;
+  top: 5em;
+  width: 2em;
+  height: 2em;
+  background-color: var(--santa-moustache);
+  border-radius: 50%;
+  border: 2px solid var(--santa-border);
+}
+
+.santa .santa-moustache::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: -2em;
+  width: 3em;
+  height: 2em;
+  background: radial-gradient(farthest-side,
+      transparent 33.3%,
+      var(--santa-border) 33.3%,
+      var(--santa-border) 37%,
+      var(--santa-moustache) 38%);
+  background-position: -3em -2em;
+  background-size: 300% 200%;
+  border-radius: 0 100% 0 100%;
+  border-bottom: 2px solid var(--santa-border);
+}
+
+.santa .santa-moustache--left {
+  left: 4em;
+  transform: rotate(-10deg) translateX(-0.4em) translateY(-0.2em);
+}
+
+.santa .santa-moustache--right {
+  left: 6em;
+  transform: scaleX(-1) rotate(-10deg) translateX(-0.1em) translateY(-0.2em);
+}
+
+.santa .santa-nose {
+  position: absolute;
+  z-index: 3;
+  left: calc(50% - 0.9em);
+  top: 4.5em;
+  width: 1.8em;
+  height: 1.4em;
+  border-radius: 50%;
+  border: 2px solid var(--santa-border);
+  box-sizing: border-box;
+  background-color: var(--santa-nose);
+}
+
+.santa .santa-eye {
+  position: absolute;
+  z-index: 4;
+  top: 3.2em;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background-color: var(--santa-border);
+}
+
+.santa .santa-eye::before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0.8em;
+  left: 0.3em;
+  width: 0.3em;
+  height: 0.3em;
+  border-radius: 50%;
+  background-color: var(--santa-beard);
+}
+
+.santa .santa-eye::after {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0.2em;
+  left: 0.5em;
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+  background-color: var(--santa-beard);
+}
+
+.santa .santa-eye--left {
+  left: 4em;
+}
+
+.santa .santa-eye--right {
+  left: 6.4em;
+}
+
+.santa .santa-hat {
+  position: absolute;
+  top: -2em;
+  left: -1em;
+  width: 12em;
+  height: 6em;
+}
+
+.santa .santa-hat-background {
+  position: absolute;
+  width: 12em;
+  height: 6em;
+  border-radius: 6em 6em 0 0;
+  background: radial-gradient(circle at 20% 100%,
+      transparent 14%,
+      var(--santa-hat) 14%);
+  filter: drop-shadow(1px 1px 0 var(--santa-border)) drop-shadow(-1px 1px 0 var(--santa-border)) drop-shadow(1px -1px 0 var(--santa-border)) drop-shadow(-1px -1px 0 var(--santa-border));
+}
+
+.santa .santa-hat-front {
+  position: absolute;
+  top: 5.8em;
+  left: 3em;
+  width: 10em;
+  height: 3em;
+  filter: drop-shadow(1px 1px 0 var(--santa-border)) drop-shadow(-1px 1px 0 var(--santa-border)) drop-shadow(1px -1px 0 var(--santa-border)) drop-shadow(-1px -1px 0 var(--santa-border));
+}
+
+.santa .santa-hat-front-bg {
+  position: absolute;
+  width: 0.666em;
+  height: 3em;
+  border-radius: 0.333em 0.333em 0 0;
+  background: var(--santa-moustache);
+}
+
+.santa .santa-hat-front-bg:nth-child(1) {
+  left: 0.666em;
+}
+
+.santa .santa-hat-front-bg:nth-child(2) {
+  left: 1.333em;
+}
+
+.santa .santa-hat-front-bg:nth-child(3) {
+  left: 2em;
+}
+
+.santa .santa-hat-front-bg:nth-child(4) {
+  left: 2.666em;
+}
+
+.santa .santa-hat-front-bg:nth-child(5) {
+  left: 3.333em;
+}
+
+.santa .santa-hat-front-bg:nth-child(6) {
+  left: 4em;
+}
+
+.santa .santa-hat-front-bg:nth-child(7) {
+  left: 4.666em;
+}
+
+.santa .santa-hat-front-bg:nth-child(8) {
+  left: 5.333em;
+}
+
+.santa .santa-hat-front-bg:nth-child(9) {
+  left: 6em;
+}
+
+.santa .santa-hat-front-bg:nth-child(10) {
+  left: 6.666em;
+}
+
+.santa .santa-hat-front-bg:nth-child(11) {
+  left: 7.333em;
+}
+
+.santa .santa-hat-front-bg:nth-child(12) {
+  left: 8em;
+}
+
+.santa .santa-hat-front-bg:nth-child(13) {
+  left: 8.666em;
+}
+
+.santa .santa-hat-front-bg:nth-child(14) {
+  left: 9.333em;
+}
+
+.santa .santa-hat-front-side {
+  position: absolute;
+  left: -0.333em;
+  width: 10.666em;
+  height: 1em;
+  border-radius: 0.5em;
+  background: var(--santa-moustache);
+}
+
+.santa .santa-hat-front-side:nth-child(1) {
+  top: 0.333em;
+}
+
+.santa .santa-hat-front-side:nth-child(2) {
+  top: 0.999em;
+}
+
+.santa .santa-hat-front-side:nth-child(3) {
+  top: 1.555em;
+}
+
+.santa .santa-hat-front-side:nth-child(4) {
+  top: 2.111em;
+}
+
+.santa .santa-hat-pompom {
+  position: absolute;
+  top: 5.2em;
+  width: 2em;
+  height: 2em;
+  filter: drop-shadow(1px 1px 0 var(--santa-border)) drop-shadow(-1px 1px 0 var(--santa-border)) drop-shadow(1px -1px 0 var(--santa-border)) drop-shadow(-1px -1px 0 var(--santa-border));
+}
+
+.santa .santa-hat-pompom-bg {
+  position: absolute;
+  width: 0.5em;
+  height: 2em;
+  background-color: var(--santa-beard);
+  border-radius: 0.25em;
+  transform-origin: center center;
+}
+
+.santa .santa-hat-pompom-bg:nth-child(2) {
+  transform: rotate(30deg);
+}
+
+.santa .santa-hat-pompom-bg:nth-child(3) {
+  transform: rotate(60deg);
+}
+
+.santa .santa-hat-pompom-bg:nth-child(4) {
+  transform: rotate(90deg);
+}
+
+.santa .santa-hat-pompom-bg:nth-child(5) {
+  transform: rotate(120deg);
+}
+
+.santa .santa-hat-pompom-bg:nth-child(6) {
+  transform: rotate(150deg);
+}
+
+/**
+ * Day 1 - Gingerbread man
+ * https://codepen.io/johnnyfekete/pen/ZEpGerj
+ */
+.gingerbread-man-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+}
+
+.gingerbread-man-container::after {
+  content: "";
+  display: block;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(circle at center,
+      rgba(0, 0, 0, 0.5) 25%,
+      rgba(0, 0, 0, 0) 50%);
+}
+
+.gingerbread-man {
+  --ginger-color: #c5753d;
+  --dark-ginger-color: #974919;
+  --white-color: #f0e5d9;
+  --green-color: #50af52;
+  --red-color: #b22922;
+
+  transform: scale(0.3) rotate(10deg);
+  position: relative;
+}
+
+@media only screen and (min-width: 576px) {
+  .gingerbread-man {
+    transform: scale(0.56) translateY(-3.7rem);
+  }
+}
+
+.gingerbread-man .head {
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+}
+
+.gingerbread-man .head::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--ginger-color);
+  border-radius: 2.2rem;
+  transform: rotate(-15deg);
+}
+
+.gingerbread-man .eye {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 2;
+}
+
+.gingerbread-man .eye.eye--left {
+  left: 22%;
+  top: 45%;
+}
+
+.gingerbread-man .eye.eye--right {
+  right: 25%;
+  top: 40%;
+}
+
+.gingerbread-man .eyebrow {
+  position: absolute;
+  z-index: 2;
+  height: 0.3rem;
+  border-radius: 0.3rem;
+  background-color: var(--green-color);
+  box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, 0.5),
+    inset -1px 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.gingerbread-man .eyebrow.eyebrow--left {
+  top: 1.6rem;
+  left: 0.8rem;
+  transform: rotate(-35deg);
+  width: 0.9rem;
+  height: 0.25rem;
+}
+
+.gingerbread-man .eyebrow.eyebrow--right {
+  top: 1.35rem;
+  right: 1.32rem;
+  transform: rotate(10deg);
+  width: 0.9rem;
+  height: 0.3rem;
+}
+
+.gingerbread-man .mouth {
+  position: absolute;
+  z-index: 2;
+  width: 3rem;
+  height: 3rem;
+  top: 1.7rem;
+  left: 1rem;
+  transform-origin: center center;
+  transform: rotate(-150deg);
+}
+
+.gingerbread-man .mouth div {
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.gingerbread-man .mouth__lower-lip {
+  width: 1.5rem;
+  height: 1.5rem;
+  overflow: hidden;
+}
+
+.gingerbread-man .mouth__lower-lip::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid var(--red-color);
+  border-radius: 50%;
+}
+
+.gingerbread-man .mouth__left-lip {
+  width: 0.75rem;
+  height: 1.5rem;
+  overflow: hidden;
+  left: 1.5rem;
+  top: 0rem;
+}
+
+.gingerbread-man .mouth__left-lip::after {
+  content: "";
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-left: -0.5rem;
+  border: 3px solid var(--red-color);
+  border-radius: 50%;
+}
+
+.gingerbread-man .mouth__right-lip {
+  width: 1rem;
+  height: 0.5rem;
+  overflow: hidden;
+  left: 0rem;
+  top: 1.5rem;
+}
+
+.gingerbread-man .mouth__right-lip::after {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-top: -0.4rem;
+  border: 3px solid var(--red-color);
+  border-radius: 50%;
+}
+
+.gingerbread-man .mouth__upper-lip {
+  width: 0.8rem;
+  height: 0.7rem;
+  overflow: hidden;
+  left: 0.7rem;
+  top: 0.8rem;
+}
+
+.gingerbread-man .mouth__upper-lip::after {
+  content: "";
+  display: block;
+  width: 1.8rem;
+  height: 1rem;
+  margin-top: 0.1rem;
+  border: 3px solid var(--red-color);
+  border-radius: 50%;
+}
+
+.gingerbread-man .body {
+  position: relative;
+  width: 5rem;
+  height: 8rem;
+}
+
+.gingerbread-man .arm {
+  width: 5rem;
+  height: 2.2rem;
+  background-color: var(--ginger-color);
+  background: linear-gradient(to right,
+      var(--dark-ginger-color) 0%,
+      var(--ginger-color) 50%);
+  border-radius: 1rem;
+  position: absolute;
+}
+
+.gingerbread-man .arm::after {
+  content: "\00a0\00a0\00a0\00a0\00a0";
+  width: 2.2rem;
+  height: 1rem;
+  overflow: hidden;
+  display: block;
+  font-size: 2rem;
+  line-height: 0;
+  -webkit-text-decoration: underline white wavy;
+  text-decoration: underline white wavy;
+  transform: rotate(90deg) translateX(0.6rem) translateY(-0.5rem);
+  transform-origin: center center;
+}
+
+.gingerbread-man .arm.arm--left {
+  transform: rotate(-35deg) translateX(-1.5rem) translateY(-0.8rem);
+}
+
+.gingerbread-man .arm.arm--right {
+  transform: rotate(-145deg) translateX(-1.5rem) translateY(1rem);
+}
+
+.gingerbread-man .leg {
+  width: 2.2rem;
+  height: 8rem;
+  background-color: var(--ginger-color);
+  background: linear-gradient(to top,
+      var(--dark-ginger-color) 0%,
+      var(--ginger-color) 40%);
+  border-radius: 1rem;
+  position: absolute;
+}
+
+.gingerbread-man .leg::after {
+  content: "\00a0\00a0\00a0\00a0\00a0";
+  width: 2.2rem;
+  height: 1rem;
+  overflow: hidden;
+  display: block;
+  font-size: 2rem;
+  line-height: 0;
+  -webkit-text-decoration: underline white wavy;
+  text-decoration: underline white wavy;
+  position: absolute;
+  bottom: 1.2rem;
+}
+
+.gingerbread-man .leg.leg--left {
+  transform: rotate(10deg) translateX(0.5rem) translateY(0rem);
+}
+
+.gingerbread-man .leg.leg--right {
+  transform: rotate(-10deg) translateX(2.4rem) translateY(0.4rem);
+}
+
+.gingerbread-man .belt::after {
+  content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
+  width: 4.1rem;
+  height: 2rem;
+  overflow: hidden;
+  display: block;
+  font-size: 1.8rem;
+  line-height: 0;
+  -webkit-text-decoration: underline white wavy;
+  text-decoration: underline white wavy;
+  position: absolute;
+  top: 3.3rem;
+  left: 0.5rem;
+  z-index: 3;
+  transform: rotate(4deg);
+}
+
+.gingerbread-man .button {
+  position: absolute;
+  width: 1.2rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background-color: var(--white-color);
+}
+
+.gingerbread-man .button::after {
+  content: "";
+  display: block;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: var(--green-color);
+  box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, 0.3),
+    inset -3px 3px 5px 0 rgba(255, 255, 255, 0.2);
+  margin-left: 0.15rem;
+}
+
+.gingerbread-man .button.button--top {
+  left: 2rem;
+  top: 0.3rem;
+}
+
+.gingerbread-man .button.button--bottom {
+  left: 2.1rem;
+  top: 2.1rem;
+  transform: rotate(145deg);
+}

@@ -51,8 +51,10 @@ body::before {
 /* start screen */
 .calendar-grid.start-screen {
   grid-template-areas:
-    "title  title  title"
-    "start  start  start";
+    "lights      lights lights"
+    "title       title  title"
+    "gingerbread santa  stocking"
+    "start       start  start";
 }
 
 .calendar-grid.start-screen .day {
@@ -68,6 +70,7 @@ body::before {
 /* calendar layout */
 .calendar-grid.calendar-screen {
   grid-template-areas:
+    "lights lights lights"
     "title  title  title"
     "day1   day2   day3"
     "day4   day5   day6"
@@ -528,4 +531,27 @@ body::before {
     left: auto;
     right: 0;
   }
+}
+
+/* Decorations */
+
+.christmas-lights-container {
+  grid-area: lights;
+}
+
+.toy-train-container {
+  grid-area: train;
+  display: none !important;
+}
+
+.santa-container {
+  grid-area: santa;
+}
+
+.stocking-container {
+  grid-area: stocking;
+}
+
+.gingerbread-man-container {
+  grid-area: gingerbread;
 }
