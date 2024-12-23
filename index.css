@@ -226,19 +226,14 @@ body::before {
   animation-name: quiet;
 }
 
-.calendar-grid.start-screen .play-area {
+.calendar-grid.start-screen .play-button {
   display: none;
 }
 
-.calendar-grid.calendar-screen .play-area {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+.calendar-grid.calendar-screen .play-button {
   position: sticky;
-  bottom: 0;
-  width: 100%;
-  height: 140px;
-  transform: translate(0, -20px);
+  bottom: 20px;
+  margin: 70px auto 0;
   z-index: 1000;
   grid-area: play;
 }
