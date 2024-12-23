@@ -56,6 +56,36 @@ body::before {
     "start  start  start";
 }
 
+/* Decorations */
+
+.christmas-lights-container {
+  grid-area: lights;
+}
+
+.toy-train-container {
+  grid-area: train;
+  display: none !important;
+}
+
+.gingerbread-man-container {
+  grid-area: ginger;
+  transform: translate(1rem, -2rem);
+  height: 70px;
+}
+
+.santa-container {
+  grid-area: santa;
+  transform: translate(0, -1rem);
+  height: 50px;
+}
+
+.stocking-container {
+  grid-area: stocking;
+  transform: translate(-1rem, -1.5rem);
+  height: 50px;
+}
+
+
 .calendar-grid.start-screen .day {
   display: none;
 }
@@ -69,18 +99,20 @@ body::before {
   padding-top: 20px;
 }
 
-.start-area .start-button {
-  background-color: transparent;
+.start-area .start-button, .play-button {
   border: dashed var(--color-green);
   background-color: var(--color-matcha);
   color: var(--color-green);
   border-radius: 0.6rem;
   display: flex;
   align-items: center;
-  gap: 0.25em;
   font-family: "Mountains of Christmas", cursive;
+}
+
+.start-area .start-button {
   font-size: 2rem;
   padding: 0 0.25em;
+  gap: 0.25em;
 }
 
 .start-area .start-button .icon {
@@ -105,6 +137,109 @@ body::before {
   top: 0.08em;
 }
 
+.play-button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  gap: 0.5em;
+}
+
+@keyframes quiet {
+  25% {
+    transform: scaleY(.6);
+  }
+
+  50% {
+    transform: scaleY(.4);
+  }
+
+  75% {
+    transform: scaleY(.8);
+  }
+}
+
+@keyframes normal {
+  25% {
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform: scaleY(.4);
+  }
+
+  75% {
+    transform: scaleY(.6);
+  }
+}
+
+@keyframes loud {
+  25% {
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform: scaleY(.4);
+  }
+
+  75% {
+    transform: scaleY(1.2);
+  }
+}
+
+.play-button .soundwave-container {
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  --soundwaveSize: 2px;
+  --gutter: 1px;
+  width: calc((var(--soundwaveSize) + var(--gutter)) * 5);
+}
+
+.play-button .soundwave {
+  transform: scaleY(.4);
+  height: 100%;
+  width: var(--soundwaveSize);
+  background: var(--color-green);
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  border-radius: 8px;
+}
+
+.play-button.playing .soundwave-1 {
+  animation-name: quiet;
+}
+
+.play-button.playing .soundwave-2 {
+  animation-name: normal;
+}
+
+.play-button.playing .soundwave-3 {
+  animation-name: quiet;
+}
+
+.play-button.playing .soundwave-4 {
+  animation-name: loud;
+}
+
+.play-button.playing .soundwave-5 {
+  animation-name: quiet;
+}
+
+.calendar-grid.start-screen .play-area {
+  display: none;
+}
+
+.calendar-grid.calendar-screen .play-area {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  transform: translate(0, -50px);
+  z-index: 1000;
+  grid-area: play;
+}
+
 /* calendar layout */
 .calendar-grid.calendar-screen {
   grid-template-areas:
@@ -121,7 +256,8 @@ body::before {
     "day22  day23  day24"
     "day25  day26  day27"
     "day28  day29  day30"
-    "day31  day32  day33";
+    "day31  day32  day33"
+    "play   play   play";
 }
 
 .calendar-grid.calendar-screen .start-area {
@@ -570,33 +706,4 @@ body::before {
     left: auto;
     right: 0;
   }
-}
-
-/* Decorations */
-
-.christmas-lights-container {
-  grid-area: lights;
-}
-
-.toy-train-container {
-  grid-area: train;
-  display: none !important;
-}
-
-.gingerbread-man-container {
-  grid-area: ginger;
-  transform: translate(1rem, -2rem);
-  height: 70px;
-}
-
-.santa-container {
-  grid-area: santa;
-  transform: translate(0, -1rem);
-  height: 50px;
-}
-
-.stocking-container {
-  grid-area: stocking;
-  transform: translate(-1rem, -1.5rem);
-  height: 50px;
 }
